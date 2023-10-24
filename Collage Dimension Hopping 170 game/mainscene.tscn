@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmkeylqhbav5r"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Ground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+
+[node name="DistantScenery" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="DistantScenery"]
