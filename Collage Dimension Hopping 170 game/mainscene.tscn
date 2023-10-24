@@ -1,11 +1,20 @@
-[gd_scene format=3 uid="uid://cmkeylqhbav5r"]
+[gd_scene load_steps=3 format=3 uid="uid://cmkeylqhbav5r"]
+
+[ext_resource type="Texture2D" uid="uid://xx3cwldraudq" path="res://Assets/testFloorTile.png" id="1_kpbtx"]
+[ext_resource type="Texture2D" uid="uid://dqn1t1rvinffd" path="res://Assets/testBG.jpg" id="2_pa83j"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
 [node name="Ground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(575.5, 597)
+scale = Vector2(72.0625, 6.125)
+texture = ExtResource("1_kpbtx")
 
 [node name="DistantScenery" type="ParallaxBackground" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="DistantScenery"]
+position = Vector2(1299.5, 273)
+scale = Vector2(0.341531, 0.14859)
+texture = ExtResource("2_pa83j")
