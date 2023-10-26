@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://31bbge6r2l87"]
+
+[ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="1_762fj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12vb1"]
+size = Vector2(20, 59)
+
+[node name="Destroyable" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_12vb1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_762fj")

@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://u7bk8tq3cpps"]
+
+[ext_resource type="Script" path="res://Characters/player.gd" id="1_ivrrq"]
+[ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="1_lcqtm"]
+[ext_resource type="Texture2D" uid="uid://cmbc6w6abiqk6" path="res://TestAssets/POW.png" id="2_6l0jw"]
+[ext_resource type="Script" path="res://Characters/CollisionShape2D.gd" id="4_a416b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j6tv2"]
+radius = 4.0
+height = 29.2
+
+[sub_resource type="Animation" id="Animation_hficl"]
+resource_name = "run"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sidescroller:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_ys665"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sidescroller:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ap0i2"]
+resource_name = "attack"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvomt"]
+_data = {
+"RESET": SubResource("Animation_ys665"),
+"attack": SubResource("Animation_ap0i2"),
+"run": SubResource("Animation_hficl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4v4o"]
+size = Vector2(139, 199)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ivrrq")
+
+[node name="Sidescroller" type="Sprite2D" parent="."]
+texture = ExtResource("1_lcqtm")
+hframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_j6tv2")
+
+[node name="Chara" type="AnimationPlayer" parent="."]
+autoplay = "run"
+libraries = {
+"": SubResource("AnimationLibrary_lvomt")
+}
+
+[node name="Attacking" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Attacking"]
+position = Vector2(101, -26.5)
+scale = Vector2(0.181818, 0.375926)
+texture = ExtResource("2_6l0jw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attacking"]
+position = Vector2(98.5, -22.5)
+shape = SubResource("RectangleShape2D_p4v4o")
+script = ExtResource("4_a416b")
+Visible = null
+
+[connection signal="area_entered" from="Attacking" to="." method="_on_attacking_area_entered"]
