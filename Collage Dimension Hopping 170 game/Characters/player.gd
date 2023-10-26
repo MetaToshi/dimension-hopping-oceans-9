@@ -30,3 +30,9 @@ func attack():
 func _on_attacking_area_entered(area):
 	if area.is_in_group("breakable"):
 		area.destroy()
+
+# Player entering through portal
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("Portal"):
+		position.x = 0
+		position.y = 1000

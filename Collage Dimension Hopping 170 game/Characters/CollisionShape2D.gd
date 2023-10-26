@@ -1,6 +1,6 @@
 extends CollisionShape2D
-@export var visible = 1
+# @export var visible = 1
 
-func visibility():
-	if visible == 2:
-		pass
+# func visibility():
+#	if visible == 2:
+#		pass
