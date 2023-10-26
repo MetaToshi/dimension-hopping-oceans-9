@@ -5,12 +5,12 @@ extends Sprite2D
 func _ready():
 	pass # Replace with function body.
 
-func _on_Portal_area_entered(area):
+func _on_portal2_area_entered(area):
 	if area.is_in_group("player"):
 		# Change the character sprite when going through the portal
 		$PlayerSprite.texture = ("res://TestAssets/testFloorTile.png")
 		
-func _on_Portal_area_exited(area):
+func _on_portal2_area_exited(area):
 	if area.is_in_group("player"):
 		# Change the character sprite back to the original version
 		$PlayerSprite.texture = ("res://TestAssets/testFloorTile.png")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://u7bk8tq3cpps"]
+[gd_scene load_steps=12 format=3 uid="uid://u7bk8tq3cpps"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_ivrrq"]
 [ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="1_lcqtm"]
@@ -25,6 +25,45 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ap0i2"]
 resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attacking:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Attacking/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Attacking/Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_t07e7"]
+resource_name = "attack5"
 
 [sub_resource type="Animation" id="Animation_hficl"]
 resource_name = "run"
@@ -47,6 +86,7 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_ys665"),
 "attack": SubResource("Animation_ap0i2"),
+"attack5": SubResource("Animation_t07e7"),
 "run": SubResource("Animation_hficl")
 }
 
@@ -86,6 +126,7 @@ libraries = {
 [node name="Attacking" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Attacking"]
+visible = false
 position = Vector2(101, -26.5)
 scale = Vector2(0.181818, 0.375926)
 texture = ExtResource("2_6l0jw")
@@ -100,4 +141,5 @@ shape = SubResource("CapsuleShape2D_46s2u")
 
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="animation_finished" from="Chara" to="." method="_on_chara_animation_finished"]
 [connection signal="area_entered" from="Attacking" to="." method="_on_attacking_area_entered"]

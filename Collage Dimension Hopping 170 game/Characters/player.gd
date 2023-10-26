@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var jump_velocity : float = -1000
 
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -22,10 +23,10 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Working on making the chracter destroy stuff
-func attack():
+func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
-		pass
-
+		$Chara.play("attack")
+		
 func respawn():
 	position.x = 0
 	position.y = 0
@@ -36,11 +37,22 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		position.x = 0
 		position.y = 1500
+	if area.is_in_group("portal2"):
+		position.x = 0
+		position.y = 3000
 		
 func _on_player_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):
 		respawn()
 		
-func _on_attacking_area_entered(_area):
+func _on_attacking_area_entered(area):
+	if area.is_in_group("enemy"):
+		var k = area.get_owner()
+		k.queue_free()
+		
 	pass
-	
+
+
+func _on_chara_animation_finished(_attack):
+	$Chara.play("run")
+	pass
