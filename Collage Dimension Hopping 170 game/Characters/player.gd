@@ -18,8 +18,6 @@ func _physics_process(delta):
 
 	#Make character move
 	velocity.x = speed
-	if velocity.x <= speed:
-		pass
 	
 	move_and_slide()
 	
@@ -27,12 +25,22 @@ func _physics_process(delta):
 func attack():
 	if Input.is_action_just_pressed("attack"):
 		pass
-func _on_attacking_area_entered(area):
-	if area.is_in_group("breakable"):
-		area.destroy()
 
+func respawn():
+	position.x = 0
+	position.y = 0
+	pass
+	
 # Player entering through portal
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		position.x = 0
-		position.y = 1000
+		position.y = 1500
+		
+func _on_player_hurt_box_area_entered(area):
+	if area.is_in_group("enemy"):
+		respawn()
+		
+func _on_attacking_area_entered(_area):
+	pass
+	

@@ -3,10 +3,9 @@
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_ivrrq"]
 [ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="1_lcqtm"]
 [ext_resource type="Texture2D" uid="uid://cmbc6w6abiqk6" path="res://TestAssets/POW.png" id="2_6l0jw"]
-[ext_resource type="Script" path="res://Characters/CollisionShape2D.gd" id="4_a416b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j6tv2"]
-radius = 25.0
+radius = 17.0
 height = 144.0
 
 [sub_resource type="Animation" id="Animation_ys665"]
@@ -54,6 +53,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4v4o"]
 size = Vector2(139, 199)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_46s2u"]
+radius = 14.0
+height = 122.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ivrrq")
 
@@ -61,9 +64,9 @@ script = ExtResource("1_ivrrq")
 texture = ExtResource("1_lcqtm")
 hframes = 10
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.76837e-07)
-scale = Vector2(1, 1)
+[node name="PlayerHurtBox" type="Area2D" parent="."]
+
+[node name="playercollider" type="CollisionShape2D" parent="PlayerHurtBox"]
 shape = SubResource("CapsuleShape2D_j6tv2")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -72,7 +75,6 @@ scale = Vector2(5, 5)
 
 [node name="CollisionShape2D (Portal)" type="CollisionShape2D" parent="Area2D"]
 visible = false
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_j6tv2")
 
 [node name="Chara" type="AnimationPlayer" parent="."]
@@ -91,7 +93,11 @@ texture = ExtResource("2_6l0jw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attacking"]
 position = Vector2(98.5, -22.5)
 shape = SubResource("RectangleShape2D_p4v4o")
-script = ExtResource("4_a416b")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 5)
+shape = SubResource("CapsuleShape2D_46s2u")
+
+[connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Attacking" to="." method="_on_attacking_area_entered"]
