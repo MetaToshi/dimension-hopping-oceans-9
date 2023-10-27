@@ -46,10 +46,9 @@ func _on_player_hurt_box_area_entered(area):
 		respawn()
 		
 func _on_attacking_area_entered(area):
-	if area.is_in_group("enemy"):
+	if area.is_in_group("breakable"):
 		var k = area.get_owner()
 		k.queue_free()
-		
 	pass
 
 
