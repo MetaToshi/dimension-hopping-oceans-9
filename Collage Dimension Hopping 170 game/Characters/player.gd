@@ -37,9 +37,14 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		position.x = 0
 		position.y = 1500
+		speed = 750
+		jump_velocity = -1500
+		
 	if area.is_in_group("portal2"):
 		position.x = 0
 		position.y = 3000
+		speed = 250
+		jump_velocity = -500
 		
 func _on_player_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -55,3 +60,6 @@ func _on_attacking_area_entered(area):
 func _on_chara_animation_finished(_attack):
 	$Chara.play("run")
 	pass
+
+
+
