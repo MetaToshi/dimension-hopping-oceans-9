@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
 [ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts/sprite_2d.tscn" id="10_e3c4m"]
 [ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
-[ext_resource type="Texture2D" uid="uid://xx3cwldraudq" path="res://TestAssets/testFloorTile.png" id="13_x024d"]
+[ext_resource type="Texture2D" uid="uid://hu3yr8f6le1k" path="res://TestAssets/controls.png" id="13_v4h0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
@@ -1577,9 +1577,9 @@ text = "Back to Main Menu
 
 [node name="ControlMenu" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(256, -132)
-scale = Vector2(40, 22.167)
-texture = ExtResource("13_x024d")
+position = Vector2(302, 130)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_v4h0e")
 
 [node name="ControlMenuX" type="Button" parent="."]
 process_mode = 2
