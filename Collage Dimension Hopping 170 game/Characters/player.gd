@@ -3,7 +3,16 @@ extends CharacterBody2D
 @export var speed : float = 500.0
 @export var jump_velocity : float = -1000
 
+onready 
 
+func _ready() -> void:
+	anim.play("idle")
+
+func play_anim( animation_name ) -> void:
+	anim.play( animation_name)
+	
+func stop_anim() -> void:
+	anim.stop()
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
