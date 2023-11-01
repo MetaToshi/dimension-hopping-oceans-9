@@ -98,19 +98,19 @@ size = Vector2(139, 199)
 radius = 14.0
 height = 122.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ivrrq")
 
 [node name="Sidescroller" type="Sprite2D" parent="."]
 texture = ExtResource("1_lcqtm")
 hframes = 10
 
-[node name="PlayerHurtBox" type="Area2D" parent="."]
+[node name="PlayerHurtBox" type="Area2D" parent="." groups=["player"]]
 
 [node name="playercollider" type="CollisionShape2D" parent="PlayerHurtBox"]
 shape = SubResource("CapsuleShape2D_j6tv2")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 position = Vector2(0, 5)
 scale = Vector2(5, 5)
 
@@ -124,7 +124,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lvomt")
 }
 
-[node name="Attacking" type="Area2D" parent="."]
+[node name="Attacking" type="Area2D" parent="." groups=["player"]]
 visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Attacking"]

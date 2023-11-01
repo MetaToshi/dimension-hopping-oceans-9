@@ -5,15 +5,20 @@ extends Sprite2D
 func _ready():
 	pass # Replace with function body.
 
-func _on_Portal_area_entered(area):
-	if area.is_in_group("player"):
-		# Change the character sprite when going through the portal
-		$PlayerSprite.texture = ("res://TestAssets/testFloorTile.png")
+#MOVED ALL OF THE BELOW INTO PLAYER (IN THE SECTION OF ON AREA 2D ENTERED)
+#func _on_Portal_area_entered(area):
+#	print(area)
+#		var k = area.get_owner()
+#		print(k)
+#		k.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
 		
-func _on_Portal_area_exited(area):
-	if area.is_in_group("player"):
-		# Change the character sprite back to the original version
-		$PlayerSprite.texture = ("res://TestAssets/testFloorTile.png")
+#func _on_Portal_area_exited(area):
+#	print(area)
+#	if area.is_in_group("player"):
+#		var k = area.get_owner()
+#		print(k)
+#		k.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn7iewmepe4w8"]
+[gd_scene load_steps=4 format=3 uid="uid://bli3i1kbgasu2"]
 
-[ext_resource type="Texture2D" uid="uid://cncfc5g87fo3q" path="res://TestAssets/enemy.png" id="1_gxf8s"]
+[ext_resource type="Script" path="res://Characters/enemy.gd" id="1_w5kl4"]
+[ext_resource type="Texture2D" uid="uid://7ptk82r6olda" path="res://TestAssets/dim1enemy.png" id="2_c7xaw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_no865"]
 radius = 32.0
 height = 210.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_w5kl4")
 
 [node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
 
@@ -15,7 +17,8 @@ position = Vector2(-5, 25)
 shape = SubResource("CapsuleShape2D_no865")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_gxf8s")
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_c7xaw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 25)
