@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed : float = 500.0
-@export var jump_velocity : float = -1000
+@export var jump_velocity : float = -1200
 
 
 """
@@ -14,8 +14,6 @@ func play_anim( animation_name ) -> void:
 func stop_anim() -> void:
 	anim.stop()
 """
-@onready var Enemy = $"../Enemy"
-@onready var Breakwall = $"../Sprite2D"
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -49,9 +47,6 @@ func respawn():
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
-		#Saving the line below for later 
-		#Enemy.texture=ResourceLoader.load()
-		Breakwall.texture=ResourceLoader.load("res://TestAssets/dim1breakwall.png")
 		
 		position.x = 0
 		position.y = 1500
@@ -62,8 +57,17 @@ func _on_area_2d_area_entered(area):
 		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
 		position.x = 0
 		position.y = 3000
-		speed = 250
+		speed = 400
 		jump_velocity = -500
+		
+	if area.is_in_group("Portal3"):
+		for i in $"..".get_children():
+			if i.is_in_group("d1breakable"):
+				i.texture=ResourceLoader.load("res://TestAssets/dim3breakwall.png")
+		position.x = 3000
+		position.y = 150
+		speed = 500	
+		jump_velocity = -1200
 		
 func _on_player_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -71,6 +75,9 @@ func _on_player_hurt_box_area_entered(area):
 		
 func _on_attacking_area_entered(area):
 	if area.is_in_group("breakable"):
+		var k = area.get_owner()
+		k.queue_free()
+	if area.is_in_group("enemy"):
 		var k = area.get_owner()
 		k.queue_free()
 	pass

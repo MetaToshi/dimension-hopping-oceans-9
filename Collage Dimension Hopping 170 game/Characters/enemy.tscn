@@ -7,7 +7,7 @@
 radius = 32.0
 height = 210.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_w5kl4")
 
 [node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
