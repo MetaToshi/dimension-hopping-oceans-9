@@ -47,7 +47,8 @@ func respawn():
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
-		
+		$ParallaxBackgroundDIM1.visible = false
+		$ParallaxBackgroundDIM2.visible = true
 		position.x = 0
 		position.y = 1500
 		speed = 750
@@ -55,6 +56,9 @@ func _on_area_2d_area_entered(area):
 		
 	if area.is_in_group("portal2"):
 		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+		$ParallaxBackgroundDIM1.visible = false
+		$ParallaxBackgroundDIM2.visible = false
+		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
 		position.x = 0
 		position.y = 3000
 		speed = 400
@@ -67,7 +71,7 @@ func _on_area_2d_area_entered(area):
 		position.x = 3000
 		position.y = 150
 		speed = 500	
-		jump_velocity = -1200
+		jump_velocity = -1500
 		
 func _on_player_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):

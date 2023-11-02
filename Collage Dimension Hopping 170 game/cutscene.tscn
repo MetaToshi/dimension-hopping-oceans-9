@@ -1447,13 +1447,11 @@ _data = {
 "walking": SubResource("Animation_qaoy0")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("1_pus6e")]
+[node name="Player" parent="." instance=ExtResource("1_pus6e")]
 z_index = 1
 position = Vector2(-1, 0)
-speed = null
-jump_velocity = null
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2(250, -125)
