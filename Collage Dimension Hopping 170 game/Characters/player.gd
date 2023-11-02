@@ -47,6 +47,9 @@ func respawn():
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
 		$PlayerTEST.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+		$PLAYERDIM1.visible = false
+		$PLAYERDIM2.visible = true
+		$PLAYERDIM3.visible = false
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = true
 		position.x = 0
@@ -56,6 +59,9 @@ func _on_area_2d_area_entered(area):
 		
 	if area.is_in_group("portal2"):
 		$PLAYERDIM2.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+		$PLAYERDIM1.visible = false
+		$PLAYERDIM2.visible = false
+		$PLAYERDIM3.visible = true
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = false
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
