@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doonog7p2mip0"
-path="res://.godot/imported/dim1bg2.png-0597463a505356c0eaa4b2a4a3f16d45.ctex"
+uid="uid://d4l653hvy8ql0"
+path="res://.godot/imported/dim3breakwall.png-e50728a87dcbe66495d634bc1650d2e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TestAssets/dim1bg2.png"
-dest_files=["res://.godot/imported/dim1bg2.png-0597463a505356c0eaa4b2a4a3f16d45.ctex"]
+source_file="res://Assets/dim3breakwall.png"
+dest_files=["res://.godot/imported/dim3breakwall.png-e50728a87dcbe66495d634bc1650d2e6.ctex"]
 
 [params]
 

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
-[ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://TestAssets/dim1bg2.png" id="3_1ubrl"]
-[ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://TestAssets/dim1bg1.png" id="4_tkkuu"]
+[ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://Assets/dim1bg2.png" id="3_xr356"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="4_tu1kj"]
-[ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://TestAssets/dim1bg1alt.png" id="5_df8bd"]
+[ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://Assets/dim1bg1.png" id="4_yseyw"]
+[ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://Assets/dim1bg1alt.png" id="5_ee8yj"]
 [ext_resource type="PackedScene" uid="uid://bn7iewmepe4w8" path="res://Characters/enemy.tscn" id="5_sf8g2"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="6_pfu4o"]
 [ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
@@ -1586,7 +1586,7 @@ motion_mirroring = Vector2(1496, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM1/ParallaxLayer2"]
 position = Vector2(576, 324)
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("3_1ubrl")
+texture = ExtResource("3_xr356")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM1"]
 motion_mirroring = Vector2(2992, 2.08165e-12)
@@ -1594,7 +1594,7 @@ motion_mirroring = Vector2(2992, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM1/ParallaxLayer"]
 position = Vector2(576, 324)
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("4_tkkuu")
+texture = ExtResource("4_yseyw")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM1"]
 motion_offset = Vector2(1496, 2.08165e-12)
@@ -1603,7 +1603,7 @@ motion_mirroring = Vector2(2992, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM1/ParallaxLayer3"]
 position = Vector2(576, 324)
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("5_df8bd")
+texture = ExtResource("5_ee8yj")
 
 [node name="ParallaxBackgroundDIM2" type="ParallaxBackground" parent="Player"]
 visible = false
