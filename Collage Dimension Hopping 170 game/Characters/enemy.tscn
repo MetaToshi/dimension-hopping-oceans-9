@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bli3i1kbgasu2"]
+[gd_scene load_steps=4 format=3 uid="uid://bn7iewmepe4w8"]
 
 [ext_resource type="Script" path="res://Characters/enemy.gd" id="1_w5kl4"]
-[ext_resource type="Texture2D" uid="uid://7ptk82r6olda" path="res://TestAssets/dim1enemy.png" id="2_c7xaw"]
+[ext_resource type="Texture2D" uid="uid://7ptk82r6olda" path="res://Assets/dim1enemy.png" id="2_c7xaw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_no865"]
 radius = 32.0
