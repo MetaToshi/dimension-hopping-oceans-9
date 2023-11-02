@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://TestAssets/dim1bg1.png" id="4_tkkuu"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="4_tu1kj"]
 [ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://TestAssets/dim1bg1alt.png" id="5_df8bd"]
-[ext_resource type="PackedScene" uid="uid://bli3i1kbgasu2" path="res://Characters/enemy.tscn" id="5_sf8g2"]
-[ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://TestAssets/Background_Dimention2_NoEyes.png" id="6_uqaig"]
+[ext_resource type="PackedScene" uid="uid://bn7iewmepe4w8" path="res://Characters/enemy.tscn" id="5_sf8g2"]
+[ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="6_pfu4o"]
 [ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
@@ -1615,7 +1615,7 @@ motion_mirroring = Vector2(1496, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM2/ParallaxLayer2"]
 position = Vector2(558, 312)
 scale = Vector2(2.93125, 2.93125)
-texture = ExtResource("6_uqaig")
+texture = ExtResource("6_pfu4o")
 
 [node name="TileMap" type="TileMap" parent="."]
 rotation = 0.00136632

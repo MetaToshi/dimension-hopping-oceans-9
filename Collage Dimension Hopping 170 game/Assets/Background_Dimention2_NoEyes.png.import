@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqn1t1rvinffd"
-path="res://.godot/imported/testBG.jpg-b21b6566217d5b44812479f98ee02b3f.ctex"
+uid="uid://ct43isrbb05tf"
+path="res://.godot/imported/Background_Dimention2_NoEyes.png-5ae40f7e7080202aa273cb8a547948b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/testBG.jpg"
-dest_files=["res://.godot/imported/testBG.jpg-b21b6566217d5b44812479f98ee02b3f.ctex"]
+source_file="res://Assets/Background_Dimention2_NoEyes.png"
+dest_files=["res://.godot/imported/Background_Dimention2_NoEyes.png-5ae40f7e7080202aa273cb8a547948b4.ctex"]
 
 [params]
 

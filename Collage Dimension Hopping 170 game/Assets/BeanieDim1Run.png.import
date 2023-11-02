@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc12lfq6flxut"
-path="res://.godot/imported/testPortal.png-dd0336164eaa5d3d9b6bd79416fcf879.ctex"
+uid="uid://cogmlg0hf22r4"
+path="res://.godot/imported/BeanieDim1Run.png-307b47cda880b02681e754ce88b4ff70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/testPortal.png"
-dest_files=["res://.godot/imported/testPortal.png-dd0336164eaa5d3d9b6bd79416fcf879.ctex"]
+source_file="res://Assets/BeanieDim1Run.png"
+dest_files=["res://.godot/imported/BeanieDim1Run.png-307b47cda880b02681e754ce88b4ff70.ctex"]
 
 [params]
 

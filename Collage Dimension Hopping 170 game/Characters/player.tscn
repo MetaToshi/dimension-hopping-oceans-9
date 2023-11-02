@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://u7bk8tq3cpps"]
+[gd_scene load_steps=15 format=3 uid="uid://u7bk8tq3cpps"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_ivrrq"]
 [ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="1_lcqtm"]
 [ext_resource type="Texture2D" uid="uid://cmbc6w6abiqk6" path="res://TestAssets/POW.png" id="2_6l0jw"]
+[ext_resource type="Texture2D" uid="uid://cogmlg0hf22r4" path="res://Assets/BeanieDim1Run.png" id="2_c30si"]
+[ext_resource type="Texture2D" uid="uid://5ojhh5dy6ng5" path="res://Assets/Beanie_D2_run_spritesheet.png" id="3_kwpe3"]
+[ext_resource type="Texture2D" uid="uid://q61lnilfiey6" path="res://Assets/Beanie_D3_spritesheet.png" id="4_7ephr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j6tv2"]
 radius = 17.0
@@ -13,10 +16,34 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sidescroller:frame")
+tracks/0/path = NodePath("../PLAYERDIM2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PLAYERDIM1:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PLAYERDIM3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -68,19 +95,43 @@ resource_name = "attack5"
 
 [sub_resource type="Animation" id="Animation_hficl"]
 resource_name = "run"
-length = 0.45
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sidescroller:frame")
+tracks/0/path = NodePath("../PLAYERDIM2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
-"transitions": PackedFloat32Array(1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1.07177, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PLAYERDIM1:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PLAYERDIM3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lvomt"]
@@ -101,7 +152,28 @@ height = 122.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ivrrq")
 
-[node name="Sidescroller" type="Sprite2D" parent="."]
+[node name="PLAYERDIM1" type="Sprite2D" parent="."]
+position = Vector2(-5.99997, -1.99998)
+scale = Vector2(0.10599, 0.104225)
+texture = ExtResource("2_c30si")
+hframes = 4
+vframes = 2
+
+[node name="PLAYERDIM2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-4.76837e-07, 5)
+scale = Vector2(0.125907, 0.142358)
+texture = ExtResource("3_kwpe3")
+hframes = 8
+
+[node name="PLAYERDIM3" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2.2134, 2.03847)
+texture = ExtResource("4_7ephr")
+hframes = 4
+
+[node name="PlayerTEST" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_lcqtm")
 hframes = 10
 
@@ -118,8 +190,13 @@ scale = Vector2(5, 5)
 visible = false
 shape = SubResource("CapsuleShape2D_j6tv2")
 
+[node name="DIM1PLAYER" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Chara")
+libraries = {
+"": SubResource("AnimationLibrary_lvomt")
+}
+
 [node name="Chara" type="AnimationPlayer" parent="."]
-autoplay = "run"
 libraries = {
 "": SubResource("AnimationLibrary_lvomt")
 }
@@ -144,5 +221,6 @@ shape = SubResource("CapsuleShape2D_46s2u")
 
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="animation_finished" from="DIM1PLAYER" to="." method="_on_chara_animation_finished"]
 [connection signal="animation_finished" from="Chara" to="." method="_on_chara_animation_finished"]
 [connection signal="area_entered" from="Attacking" to="." method="_on_attacking_area_entered"]

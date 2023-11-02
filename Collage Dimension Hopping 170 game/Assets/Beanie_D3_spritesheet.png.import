@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct43isrbb05tf"
-path="res://.godot/imported/Background_Dimention2_NoEyes.png-af5f5f989a7667a1cb6a4e65e093b0ef.ctex"
+uid="uid://q61lnilfiey6"
+path="res://.godot/imported/Beanie_D3_spritesheet.png-779753a956b4f52b288aba6fc758109a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TestAssets/Background_Dimention2_NoEyes.png"
-dest_files=["res://.godot/imported/Background_Dimention2_NoEyes.png-af5f5f989a7667a1cb6a4e65e093b0ef.ctex"]
+source_file="res://Assets/Beanie_D3_spritesheet.png"
+dest_files=["res://.godot/imported/Beanie_D3_spritesheet.png-779753a956b4f52b288aba6fc758109a.ctex"]
 
 [params]
 

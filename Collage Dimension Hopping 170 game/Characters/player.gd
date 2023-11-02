@@ -46,7 +46,7 @@ func respawn():
 # Player entering through portal
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Portal"):
-		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+		$PlayerTEST.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = true
 		position.x = 0
@@ -55,14 +55,14 @@ func _on_area_2d_area_entered(area):
 		jump_velocity = -1500
 		
 	if area.is_in_group("portal2"):
-		$Sidescroller.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
+		$PLAYERDIM2.texture=ResourceLoader.load("res://TestAssets/testFloorTile.png")
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = false
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
 		position.x = 0
 		position.y = 3000
 		speed = 400
-		jump_velocity = -500
+		jump_velocity = -1800
 		
 	if area.is_in_group("Portal3"):
 		for i in $"..".get_children():
@@ -88,7 +88,7 @@ func _on_attacking_area_entered(area):
 
 
 func _on_chara_animation_finished(_attack):
-	$Chara.play("run")
+	$DIM1PLAYER.play("run")
 	pass
 
 
