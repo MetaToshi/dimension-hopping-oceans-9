@@ -6,11 +6,11 @@ func _ready():
 	pass # Replace with function body.
 	$AnimationPlayer.play("walking")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
-	
+
+
 # code below is to connect the cutscenes and the main scene together	
 
 #func switchToSceneInGroup(group_name: String, scene_name: String):
@@ -32,3 +32,6 @@ func _process(delta):
 #		if group.has(scene_name):
 #			return group[scene_name]
 #	return ""
+
+func _on_continue_button_pressed():
+	get_tree().change_scene_to_file("res://mainscene.tscn")

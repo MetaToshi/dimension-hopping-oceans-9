@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://b50kivr8cdnj3"]
 
-[ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_lkxsp"]
-[ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_1c1cn"]
-[ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://Assets/dim1bg2.png" id="3_a3p6h"]
-[ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://Assets/dim1bg1.png" id="4_72e6c"]
-[ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="4_ribq0"]
-[ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://Assets/dim1bg1alt.png" id="5_0o67c"]
-[ext_resource type="Texture2D" uid="uid://cogmlg0hf22r4" path="res://Assets/BeanieDim1Run.png" id="7_akuad"]
+[ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_ln2dp"]
+[ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_aj0ac"]
+[ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://Assets/dim1bg2.png" id="3_2xwvp"]
+[ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://Assets/dim1bg1.png" id="4_pa008"]
+[ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://Assets/dim1bg1alt.png" id="5_eawtv"]
+[ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="6_gjesu"]
+[ext_resource type="Texture2D" uid="uid://cogmlg0hf22r4" path="res://Assets/BeanieDim1Run.png" id="7_s8f15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
-texture = ExtResource("2_1c1cn")
+texture = ExtResource("2_aj0ac")
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/terrain = 0
@@ -1450,50 +1450,50 @@ length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Flow/Sprite2D:frame")
+tracks/0/path = NodePath("Flow:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, null, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Flow:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(533, -3), Vector2(1766, -3)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Beanie/Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beanie/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Beanie:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.1, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(190, -6), Vector2(190, -6), Vector2(1814, -18)]
+}
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Beanie/Sprite2D:position")
+tracks/3/path = NodePath("Flow/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 3, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(204, 241), Vector2(204, 241), Vector2(1572, 233)]
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
 [sub_resource type="Animation" id="Animation_odr7r"]
@@ -1501,50 +1501,50 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Flow/Sprite2D:frame")
+tracks/0/path = NodePath("Flow:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"update": 0,
+"values": [Vector2(529, 3)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Flow:position")
+tracks/1/path = NodePath("Beanie/Sprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(529, 3)]
+"update": 1,
+"values": [0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Beanie/Sprite2D:frame")
+tracks/2/path = NodePath("Beanie:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"update": 0,
+"values": [Vector2(190, -6)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Beanie/Sprite2D:position")
+tracks/3/path = NodePath("Flow/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(204, 241)]
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h3m4h"]
@@ -1557,7 +1557,7 @@ _data = {
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(3, 0)
-script = ExtResource("1_lkxsp")
+script = ExtResource("1_ln2dp")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, 0)
@@ -1574,41 +1574,41 @@ drag_vertical_offset = 0.1
 drag_top_margin = 0.75
 drag_bottom_margin = 0.0
 
-[node name="Button" type="Button" parent="."]
+[node name="ParallaxBackgroundDIM1" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackgroundDIM1"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1496, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM1/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_2xwvp")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundDIM1"]
+motion_mirroring = Vector2(2992, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM1/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_pa008")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackgroundDIM1"]
+motion_offset = Vector2(1496, 2.08165e-12)
+motion_mirroring = Vector2(2992, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM1/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_eawtv")
+
+[node name="ContinueButton" type="Button" parent="."]
 offset_left = 928.0
 offset_top = 389.0
 offset_right = 1403.0
 offset_bottom = 494.0
 text = "After Cutscene,
 Click here to Continue "
-
-[node name="ParallaxBackgroundDIM1" type="ParallaxBackground" parent="Button"]
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Button/ParallaxBackgroundDIM1"]
-motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(1496, 2.08165e-12)
-
-[node name="Sprite2D" type="Sprite2D" parent="Button/ParallaxBackgroundDIM1/ParallaxLayer2"]
-position = Vector2(576, 324)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("3_a3p6h")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Button/ParallaxBackgroundDIM1"]
-motion_mirroring = Vector2(2992, 2.08165e-12)
-
-[node name="Sprite2D" type="Sprite2D" parent="Button/ParallaxBackgroundDIM1/ParallaxLayer"]
-position = Vector2(576, 324)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("4_72e6c")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="Button/ParallaxBackgroundDIM1"]
-motion_offset = Vector2(1496, 2.08165e-12)
-motion_mirroring = Vector2(2992, 2.08165e-12)
-
-[node name="Sprite2D" type="Sprite2D" parent="Button/ParallaxBackgroundDIM1/ParallaxLayer3"]
-position = Vector2(576, 324)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("5_0o67c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1620,17 +1620,17 @@ position = Vector2(529, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Flow"]
 position = Vector2(-6, 248)
-texture = ExtResource("4_ribq0")
+texture = ExtResource("6_gjesu")
 hframes = 10
 
 [node name="Label" type="Label" parent="Flow"]
-offset_left = -26.7
-offset_top = 123.0
-offset_right = 364.3
-offset_bottom = 183.0
+offset_left = -39.7
+offset_top = 131.0
+offset_right = 422.3
+offset_bottom = 191.0
 theme = SubResource("Theme_imims")
 theme_type_variation = &"HeaderLarge"
-text = "Catch me if you can bestie!! "
+text = "Haha! Catch me if you can bestie!! "
 
 [node name="Beanie" type="Node2D" parent="."]
 position = Vector2(190, -6)
@@ -1638,6 +1638,17 @@ position = Vector2(190, -6)
 [node name="Sprite2D" type="Sprite2D" parent="Beanie"]
 position = Vector2(204, 241)
 scale = Vector2(0.135286, 0.135286)
-texture = ExtResource("7_akuad")
+texture = ExtResource("7_s8f15")
 hframes = 4
 vframes = 2
+
+[node name="Label" type="Label" parent="Beanie"]
+offset_left = -42.0
+offset_top = 123.0
+offset_right = 420.0
+offset_bottom = 183.0
+theme_type_variation = &"HeaderLarge"
+text = "Hahaha! I'm gonna getcha! >:D"
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="toggled" from="ContinueButton" to="." method="_on_button_toggled"]

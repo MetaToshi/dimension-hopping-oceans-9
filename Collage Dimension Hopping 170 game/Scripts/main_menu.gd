@@ -2,7 +2,7 @@ extends Node
 
 
 func _on_startbutton_pressed():
-	get_tree().change_scene_to_file("res://mainscene.tscn")
+	get_tree().change_scene_to_file("res://cutsceneDIM1.tscn")
 
 
 func _on_optionsbutton_pressed():
