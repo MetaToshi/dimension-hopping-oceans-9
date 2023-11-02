@@ -157,8 +157,8 @@ height = 122.0
 script = ExtResource("1_ivrrq")
 
 [node name="PLAYERDIM1" type="Sprite2D" parent="."]
-position = Vector2(-5.99997, -1.99998)
-scale = Vector2(0.10599, 0.104225)
+position = Vector2(-6, -17)
+scale = Vector2(0.122917, 0.121383)
 texture = ExtResource("2_c30si")
 hframes = 4
 vframes = 2

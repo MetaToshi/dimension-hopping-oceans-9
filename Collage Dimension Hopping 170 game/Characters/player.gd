@@ -50,6 +50,7 @@ func respawn():
 	
 # Player entering through portal
 func _on_area_2d_area_entered(area):
+	# get_tree().change_scene_to_file("res://cutscene.tscn")
 	if area.is_in_group("Portal"):
 		$PLAYERDIM1.visible = false
 		$PLAYERDIM2.visible = true

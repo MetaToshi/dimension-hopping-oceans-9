@@ -1681,6 +1681,7 @@ drag_bottom_margin = 0.0
 [node name="ParallaxBackgroundDIM1" type="ParallaxBackground" parent="Player"]
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM1"]
+position = Vector2(11, -10)
 motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(1496, 2.08165e-12)
 
@@ -1690,6 +1691,7 @@ scale = Vector2(1.3, 1.3)
 texture = ExtResource("3_xr356")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM1"]
+position = Vector2(11, -10)
 motion_mirroring = Vector2(2992, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM1/ParallaxLayer"]
@@ -1698,6 +1700,7 @@ scale = Vector2(1.3, 1.3)
 texture = ExtResource("4_yseyw")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM1"]
+position = Vector2(11, -10)
 motion_offset = Vector2(1496, 2.08165e-12)
 motion_mirroring = Vector2(2992, 2.08165e-12)
 
