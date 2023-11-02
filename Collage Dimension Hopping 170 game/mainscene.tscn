@@ -6,14 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://TestAssets/dim1bg1.png" id="4_tkkuu"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="4_tu1kj"]
 [ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://TestAssets/dim1bg1alt.png" id="5_df8bd"]
-[ext_resource type="PackedScene" uid="uid://bn7iewmepe4w8" path="res://Characters/enemy.tscn" id="5_sf8g2"]
+[ext_resource type="PackedScene" uid="uid://bli3i1kbgasu2" path="res://Characters/enemy.tscn" id="5_sf8g2"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://TestAssets/Background_Dimention2_NoEyes.png" id="6_uqaig"]
 [ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
 [ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts/sprite_2d.tscn" id="10_e3c4m"]
 [ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
-[ext_resource type="Texture2D" uid="uid://hu3yr8f6le1k" path="res://TestAssets/controls.png" id="13_v4h0e"]
+[ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
@@ -1681,17 +1681,17 @@ offset_right = 558.0
 offset_bottom = -10.0
 alignment = 1
 
-[node name="Sound" type="Button" parent="PauseMenu"]
+[node name="Back to Game" type="Button" parent="PauseMenu"]
 layout_mode = 2
-text = "Sound"
+text = "Back to Game"
 
 [node name="Controls" type="Button" parent="PauseMenu"]
 layout_mode = 2
 text = "Controls"
 
-[node name="Back to Game" type="Button" parent="PauseMenu"]
+[node name="Sound" type="Button" parent="PauseMenu"]
 layout_mode = 2
-text = "Back to Game"
+text = "Sound"
 
 [node name="Back to Main Menu" type="Button" parent="PauseMenu"]
 layout_mode = 2
@@ -1701,8 +1701,8 @@ text = "Back to Main Menu
 [node name="ControlMenu" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(302, 130)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("13_v4h0e")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_g383w")
 
 [node name="ControlMenuX" type="Button" parent="."]
 process_mode = 2
@@ -1713,7 +1713,7 @@ offset_right = 95.0
 offset_bottom = 30.0
 text = "X"
 
-[connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Game" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Main Menu" to="." method="_on_back_to_main_menu_pressed"]
 [connection signal="pressed" from="ControlMenuX" to="." method="_on_control_menu_x_pressed"]

@@ -5,7 +5,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		$PauseMenu.visible = true
 		$PauseMenu.position = $Player.position
-		$PauseMenu.position.y -= 200
+		$PauseMenu.position.y -= 225
 		$PauseMenu.position.x -= 50
 		get_tree().paused = true
 		
@@ -23,8 +23,13 @@ func _on_back_to_main_menu_pressed():
 func _on_controls_pressed():
 	$ControlMenuX.position = $PauseMenu.position
 	$ControlMenu.position = $PauseMenu.position
-	$ControlMenu.position.y += 100
-	$ControlMenu.position.x += 325
+	
+	$ControlMenu.position.y -= 90
+	$ControlMenu.position.x += 310
+	
+	$ControlMenuX.position.y -= 190
+	$ControlMenuX.position.x += 655
+	
 	$ControlMenuX.visible = true
 	$ControlMenu.visible = true
 	
