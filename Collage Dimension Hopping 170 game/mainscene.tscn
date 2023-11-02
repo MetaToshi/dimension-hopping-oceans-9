@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bx3jo2g1t1nns"]
+[gd_scene load_steps=20 format=3 uid="uid://bx3jo2g1t1nns"]
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
 [ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts/sprite_2d.tscn" id="10_e3c4m"]
 [ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
+[ext_resource type="Texture2D" uid="uid://bm8k3dm7o5df0" path="res://Assets/game_hint_text.webp" id="13_gao4e"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
@@ -1669,6 +1670,10 @@ shape = SubResource("CapsuleShape2D_v6rqr")
 
 [node name="BreakableWall" parent="." instance=ExtResource("10_e3c4m")]
 position = Vector2(7500, -50)
+
+[node name="FirstWallHint" type="Sprite2D" parent="."]
+position = Vector2(6983, -100)
+texture = ExtResource("13_gao4e")
 
 [node name="Node2D" parent="." instance=ExtResource("11_l4yfr")]
 
