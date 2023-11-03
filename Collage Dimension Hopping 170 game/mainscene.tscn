@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bx3jo2g1t1nns"]
+[gd_scene load_steps=22 format=3 uid="uid://b16ogmtxejlxb"]
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bn7iewmepe4w8" path="res://Characters/enemy.tscn" id="5_sf8g2"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="6_pfu4o"]
 [ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
-[ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
+[ext_resource type="Script" path="res://Scripts + Scenes/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Texture2D" uid="uid://u1ynwxd6nctf" path="res://Assets/DIM3 tileset.png" id="8_jn134"]
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
-[ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts/sprite_2d.tscn" id="10_e3c4m"]
-[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
+[ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts + Scenes/sprite_2d.tscn" id="10_e3c4m"]
+[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts + Scenes/mainmenu.tscn" id="11_l4yfr"]
 [ext_resource type="Texture2D" uid="uid://bm8k3dm7o5df0" path="res://Assets/game_hint_text.webp" id="13_gao4e"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
 

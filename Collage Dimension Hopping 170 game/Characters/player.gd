@@ -61,8 +61,8 @@ func _on_area_2d_area_entered(area):
 		$DIM2BGMUSIC.play()
 		position.x = 0
 		position.y = 1500
-		speed = 750
-		jump_velocity = -1500
+		speed = 500
+		jump_velocity = -650
 		
 	if area.is_in_group("portal2"):
 		$PLAYERDIM1.visible = false
@@ -75,8 +75,8 @@ func _on_area_2d_area_entered(area):
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
 		position.x = 0
 		position.y = 3000
-		speed = 400
-		jump_velocity = -1200
+		speed = 500
+		jump_velocity = -1000
 		
 	if area.is_in_group("Portal3"):
 		for i in $"..".get_children():

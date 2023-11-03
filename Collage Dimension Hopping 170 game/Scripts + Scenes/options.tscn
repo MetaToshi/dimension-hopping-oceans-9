@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3npsqeepojxr"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://Scripts/options.gd" id="1_b6u4m"]
+[ext_resource type="Script" path="res://Scripts + Scenes/options.gd" id="1_b6u4m"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="2_cufvl"]
 
 [node name="Options" type="Node2D"]

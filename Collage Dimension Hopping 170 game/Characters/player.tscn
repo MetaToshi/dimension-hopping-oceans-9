@@ -155,6 +155,7 @@ height = 122.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ivrrq")
+jump_velocity = -1000.0
 
 [node name="PLAYERDIM1" type="Sprite2D" parent="."]
 position = Vector2(-6, -17)
