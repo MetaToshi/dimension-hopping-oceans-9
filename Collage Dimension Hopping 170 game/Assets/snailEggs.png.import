@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnph8nxeycsdp"
-path="res://.godot/imported/dim3breakwall.png-e50728a87dcbe66495d634bc1650d2e6.ctex"
+uid="uid://b38g1o6v5fmhc"
+path="res://.godot/imported/snailEggs.png-8d344c3387b3d9d51795ebf840212661.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/dim3breakwall.png"
-dest_files=["res://.godot/imported/dim3breakwall.png-e50728a87dcbe66495d634bc1650d2e6.ctex"]
+source_file="res://Assets/snailEggs.png"
+dest_files=["res://.godot/imported/snailEggs.png-8d344c3387b3d9d51795ebf840212661.ctex"]
 
 [params]
 

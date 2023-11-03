@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed : float = 500.0
-@export var jump_velocity : float = -1200
+@export var jump_velocity : float = -1250
 
 
 """
@@ -61,8 +61,8 @@ func _on_area_2d_area_entered(area):
 		$DIM2BGMUSIC.play()
 		position.x = 0
 		position.y = 1500
-		speed = 500
-		jump_velocity = -650
+		speed = 750
+		jump_velocity = -1500
 		
 	if area.is_in_group("portal2"):
 		$PLAYERDIM1.visible = false
@@ -75,17 +75,13 @@ func _on_area_2d_area_entered(area):
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
 		position.x = 0
 		position.y = 3000
-		speed = 500
+		gravity = 2500
+		speed = 400
 		jump_velocity = -1000
 		
 	if area.is_in_group("Portal3"):
-		for i in $"..".get_children():
-			if i.is_in_group("d1breakable"):
-				i.texture=ResourceLoader.load("res://TestAssets/dim3breakwall.png")
 		position.x = 3000
 		position.y = 150
-		speed = 500	
-		jump_velocity = -1500
 		
 func _on_player_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -104,6 +100,3 @@ func _on_attacking_area_entered(area):
 func _on_chara_animation_finished(_attack):
 	$DIM1PLAYER.play("run")
 	pass
-
-
-
