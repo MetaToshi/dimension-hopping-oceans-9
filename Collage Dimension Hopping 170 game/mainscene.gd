@@ -38,3 +38,10 @@ func _on_controls_pressed():
 func _on_control_menu_x_pressed():
 	$ControlMenuX.visible = false
 	$ControlMenu.visible = false
+
+
+func _on_reload_checkpoint_pressed():
+	get_tree().paused = false
+	$PauseMenu.visible = false
+	$Player.respawn()
+

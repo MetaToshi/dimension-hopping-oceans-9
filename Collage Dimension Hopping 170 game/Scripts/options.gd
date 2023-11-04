@@ -18,3 +18,7 @@ func _on_back_pressed():
 func _on_controls_pressed():
 	$VBoxContainer/Description.visible = true
 	$Button.visible = true
+
+
+func _on_reload_checkpoint_pressed():
+	pass # Replace with function body.

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed : float = 500.0
 @export var jump_velocity : float = -1250
+var current_Restart = Vector2(0,200)
 
 
 """
@@ -41,12 +42,15 @@ func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
 		$Chara.play("attack")
 		$FireSpell.play()
-		
+	if Input.is_action_just_pressed("Restart from Checkpoint"):
+		respawn()
+			
 func respawn():
-	$DIM1BGMUSIC.play()
-	position.x = 0
-	position.y = 0
-	pass
+	position = current_Restart
+	$Camera2D.position.x = current_Restart.x - 200
+	$Camera2D.position.y = current_Restart.y - 500
+	if current_Restart.y > 1000:
+		$Camera2D.position.y = current_Restart.y - 5000
 	
 # Player entering through portal
 func _on_area_2d_area_entered(area):
@@ -61,6 +65,8 @@ func _on_area_2d_area_entered(area):
 		$DIM2BGMUSIC.play()
 		position.x = 0
 		position.y = 1500
+		current_Restart.x = 0
+		current_Restart.y = 1500
 		speed = 750
 		jump_velocity = -1500
 		
@@ -75,6 +81,8 @@ func _on_area_2d_area_entered(area):
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size
 		position.x = 0
 		position.y = 3000
+		current_Restart.x = 0
+		current_Restart.y = 3000
 		gravity = 2500
 		speed = 400
 		jump_velocity = -1000

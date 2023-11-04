@@ -12,8 +12,8 @@
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Texture2D" uid="uid://u1ynwxd6nctf" path="res://Assets/DIM3 tileset.png" id="8_jn134"]
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
-[ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts/d1_breakable.tscn" id="10_e3c4m"]
-[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
+[ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts + Scenes/sprite_2d.tscn" id="10_e3c4m"]
+[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts + Scenes/mainmenu.tscn" id="11_l4yfr"]
 [ext_resource type="Texture2D" uid="uid://bm8k3dm7o5df0" path="res://Assets/game_hint_text.webp" id="13_gao4e"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
 [ext_resource type="PackedScene" uid="uid://bjn500ldjgebj" path="res://Scripts/d1_jumpable.tscn" id="17_vewc0"]
@@ -1831,6 +1831,10 @@ alignment = 1
 layout_mode = 2
 text = "Back to Game"
 
+[node name="Reload Checkpoint" type="Button" parent="PauseMenu"]
+layout_mode = 2
+text = "Reload Checkpoint"
+
 [node name="Controls" type="Button" parent="PauseMenu"]
 layout_mode = 2
 text = "Controls"
@@ -1866,8 +1870,8 @@ position = Vector2(1359, 201)
 position = Vector2(4577, 211)
 
 [node name="GameProjectTutorialImage" type="Sprite2D" parent="."]
-position = Vector2(1351, -17)
-scale = Vector2(0.2, 0.2)
+position = Vector2(1100, -17)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("14_g383w")
 
 [node name="JumpWall3" parent="." instance=ExtResource("17_vewc0")]
@@ -1904,6 +1908,8 @@ position = Vector2(11080, 118)
 position = Vector2(11975, 100)
 
 [connection signal="pressed" from="PauseMenu/Back to Game" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_reload_checkpoint_pressed"]
 [connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Main Menu" to="." method="_on_back_to_main_menu_pressed"]
 [connection signal="pressed" from="ControlMenuX" to="." method="_on_control_menu_x_pressed"]
