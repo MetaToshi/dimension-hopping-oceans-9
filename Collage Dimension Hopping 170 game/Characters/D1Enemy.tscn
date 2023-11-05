@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://7ptk82r6olda" path="res://Assets/dim1enemy.png" id="2_c7xaw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_no865"]
-radius = 32.0
-height = 210.0
+radius = 55.0
+height = 234.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_vur7k")
@@ -13,7 +13,7 @@ script = ExtResource("1_vur7k")
 [node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5, 25)
+position = Vector2(-45, 15)
 shape = SubResource("CapsuleShape2D_no865")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,5 +21,5 @@ scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_c7xaw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 25)
+position = Vector2(-45, 15)
 shape = SubResource("CapsuleShape2D_no865")

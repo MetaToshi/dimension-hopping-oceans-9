@@ -1,25 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn7iewmepe4w8"]
+[gd_scene load_steps=4 format=3 uid="uid://cyej7wiyd2ory"]
 
-[ext_resource type="Script" path="res://Characters/enemy.gd" id="1_w5kl4"]
-[ext_resource type="Texture2D" uid="uid://7ptk82r6olda" path="res://Assets/dim1enemy.png" id="2_c7xaw"]
+[ext_resource type="Script" path="res://Characters/d2enemy.gd" id="1_kecki"]
+[ext_resource type="Texture2D" uid="uid://c35efjd7cenlt" path="res://Assets/Monster_Rushed.png" id="2_tqy3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_no865"]
-radius = 32.0
-height = 210.0
+radius = 111.0
+height = 224.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
-script = ExtResource("1_w5kl4")
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_kecki")
 
 [node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5, 25)
+position = Vector2(7, 5)
 shape = SubResource("CapsuleShape2D_no865")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_c7xaw")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_tqy3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 25)
+position = Vector2(7, 5)
 shape = SubResource("CapsuleShape2D_no865")

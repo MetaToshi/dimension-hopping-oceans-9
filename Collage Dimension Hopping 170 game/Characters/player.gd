@@ -68,7 +68,7 @@ func _on_area_2d_area_entered(area):
 		position.x = 0
 		position.y = 1500
 		current_Restart.x = 0
-		current_Restart.y = 1500
+		current_Restart.y = 2600
 		speed = 775
 		jump_velocity = -950
 		
@@ -86,7 +86,7 @@ func _on_area_2d_area_entered(area):
 		position.x = 0
 		position.y = 3000
 		current_Restart.x = 0
-		current_Restart.y = 3000
+		current_Restart.y = 6200
 		gravity = 2000
 		speed = 400
 		jump_velocity = -1100

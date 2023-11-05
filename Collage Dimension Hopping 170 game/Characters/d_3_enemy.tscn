@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bub3wylwvnlks"]
+
+[ext_resource type="Script" path="res://Characters/d_3_enemy.gd" id="1_0qniu"]
+[ext_resource type="Texture2D" uid="uid://b0uqq6udbrk5u" path="res://Assets/DIM3 froggo.png" id="1_b813t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2vmh"]
+radius = 20.0
+height = 50.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5lwv"]
+radius = 20.0
+height = 50.0
+
+[node name="D3Enemy" type="CharacterBody2D" groups=["breakable", "enemy"]]
+scale = Vector2(8, 8)
+script = ExtResource("1_0qniu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b813t")
+
+[node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_f2vmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_a5lwv")
