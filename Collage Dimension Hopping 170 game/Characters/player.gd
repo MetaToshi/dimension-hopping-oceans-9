@@ -59,6 +59,8 @@ func _on_area_2d_area_entered(area):
 		$PLAYERDIM1.visible = false
 		$PLAYERDIM2.visible = true
 		$PLAYERDIM3.visible = false
+		$Attacking/D1Attack.visible = false
+		$Attacking/D2Attack.visible = true
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = true
 		$DIM1BGMUSIC.stop()
@@ -74,6 +76,8 @@ func _on_area_2d_area_entered(area):
 		$PLAYERDIM1.visible = false
 		$PLAYERDIM2.visible = false
 		$PLAYERDIM3.visible = true
+		$Attacking/D2Attack.visible = false
+		$Attacking/D3Attack.visible = true
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = false
 		$DIM2BGMUSIC.stop()
@@ -99,9 +103,13 @@ func _on_attacking_area_entered(area):
 	if area.is_in_group("breakable"):
 		var k = area.get_owner()
 		k.queue_free()
+		$Attacking.set_deferred("visible", false)
+		$Attacking/CollisionShape2D.set_deferred("disabled", true)
 	if area.is_in_group("enemy"):
 		var k = area.get_owner()
 		k.queue_free()
+		$Attacking.set_deferred("visible", false)
+		$Attacking/CollisionShape2D.set_deferred("disabled", true)
 	pass
 
 

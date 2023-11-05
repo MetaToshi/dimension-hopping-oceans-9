@@ -1,12 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://u7bk8tq3cpps"]
+[gd_scene load_steps=21 format=3 uid="uid://u7bk8tq3cpps"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_ivrrq"]
 [ext_resource type="Texture2D" uid="uid://baooji15uma6k" path="res://TestAssets/sidescroller.png" id="1_lcqtm"]
-[ext_resource type="Texture2D" uid="uid://cmbc6w6abiqk6" path="res://TestAssets/POW.png" id="2_6l0jw"]
 [ext_resource type="Texture2D" uid="uid://cogmlg0hf22r4" path="res://Assets/BeanieDim1Run.png" id="2_c30si"]
 [ext_resource type="Texture2D" uid="uid://5ojhh5dy6ng5" path="res://Assets/Beanie_D2_run_spritesheet.png" id="3_kwpe3"]
 [ext_resource type="Texture2D" uid="uid://q61lnilfiey6" path="res://Assets/Beanie_D3_spritesheet.png" id="4_7ephr"]
+[ext_resource type="Texture2D" uid="uid://yokixc18lvyu" path="res://Assets/firebolt.png" id="6_t0l4p"]
 [ext_resource type="AudioStream" uid="uid://dxyqgi68bne8j" path="res://Audio/Fire_Spell.wav" id="7_bilur"]
+[ext_resource type="Texture2D" uid="uid://dgi4rcwjo85vm" path="res://Assets/d2arrow.png" id="7_owupa"]
+[ext_resource type="Texture2D" uid="uid://b8d088yi1cq2s" path="res://Assets/arrow.png" id="8_folax"]
 [ext_resource type="AudioStream" uid="uid://co08x8y6y2d45" path="res://Audio/Dimension_1_BGM_v1.wav" id="8_p0i4q"]
 [ext_resource type="AudioStream" uid="uid://dsdfqu6pv75vw" path="res://Audio/Dimension_2_BGM.wav" id="9_mpgmt"]
 [ext_resource type="AudioStream" uid="uid://cgmueungf2qdj" path="res://Audio/ARTG_170_Jam_2_Dimension_3_BGM_v1.wav" id="10_ihi1b"]
@@ -84,14 +86,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Attacking/Sprite2D:visible")
+tracks/2/path = NodePath("Attacking:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(200, 2.08165e-12)]
 }
 
 [sub_resource type="Animation" id="Animation_t07e7"]
@@ -147,7 +149,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4v4o"]
-size = Vector2(139, 199)
+size = Vector2(113, 39)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_46s2u"]
 radius = 14.0
@@ -209,16 +211,28 @@ libraries = {
 [node name="Attacking" type="Area2D" parent="." groups=["player"]]
 visible = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Attacking"]
-visible = false
-position = Vector2(101, -26.5)
-scale = Vector2(0.181818, 0.375926)
-texture = ExtResource("2_6l0jw")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attacking"]
-position = Vector2(98.5, -22.5)
+position = Vector2(104.5, -27.5)
 shape = SubResource("RectangleShape2D_p4v4o")
 disabled = true
+
+[node name="D1Attack" type="Sprite2D" parent="Attacking"]
+position = Vector2(100, -20)
+rotation = 4.71239
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("6_t0l4p")
+
+[node name="D2Attack" type="Sprite2D" parent="Attacking"]
+visible = false
+position = Vector2(100, -25)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_owupa")
+
+[node name="D3Attack" type="Sprite2D" parent="Attacking"]
+visible = false
+position = Vector2(110, -25)
+scale = Vector2(5, 5)
+texture = ExtResource("8_folax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 5)
