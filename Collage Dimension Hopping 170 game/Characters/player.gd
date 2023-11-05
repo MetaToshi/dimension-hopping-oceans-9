@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed : float = 500.0
-@export var jump_velocity : float = -1250
+@export var speed : float = 600.0
+@export var jump_velocity : float = -1150
 var current_Restart = Vector2(0,200)
 
 
@@ -67,8 +67,8 @@ func _on_area_2d_area_entered(area):
 		position.y = 1500
 		current_Restart.x = 0
 		current_Restart.y = 1500
-		speed = 750
-		jump_velocity = -1500
+		speed = 775
+		jump_velocity = -950
 		
 	if area.is_in_group("portal2"):
 		$PLAYERDIM1.visible = false
@@ -83,9 +83,9 @@ func _on_area_2d_area_entered(area):
 		position.y = 3000
 		current_Restart.x = 0
 		current_Restart.y = 3000
-		gravity = 2500
+		gravity = 2000
 		speed = 400
-		jump_velocity = -1000
+		jump_velocity = -1100
 		
 	if area.is_in_group("Portal3"):
 		position.x = 3000
