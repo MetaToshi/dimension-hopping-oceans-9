@@ -22,8 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bjn500ldjgebj" path="res://Scripts/d1_jumpable.tscn" id="17_vewc0"]
 [ext_resource type="PackedScene" uid="uid://ct22pepdmjxr5" path="res://Scripts/d3_breakable.tscn" id="18_yrbqv"]
 [ext_resource type="PackedScene" uid="uid://b8kb8qaw842w6" path="res://Scripts/d2_breakable.tscn" id="19_5kmwc"]
-[ext_resource type="PackedScene" uid="uid://cyej7wiyd2ory" path="res://Characters/d2enemy.tscn" id="22_6erjc"]
-[ext_resource type="PackedScene" uid="uid://bub3wylwvnlks" path="res://Characters/d_3_enemy.tscn" id="23_jbuwv"]
+[ext_resource type="PackedScene" path="res://Characters/d2enemy.tscn" id="22_6erjc"]
+[ext_resource type="PackedScene" path="res://Characters/d_3_enemy.tscn" id="23_jbuwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
