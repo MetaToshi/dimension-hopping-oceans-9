@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var breakables = get_tree().get_nodes_in_group("breakableparent")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
@@ -8,6 +9,20 @@ func _process(_delta):
 		$PauseMenu.position.y -= 225
 		$PauseMenu.position.x -= 50
 		get_tree().paused = true
+	if $Player.position.x <= 100:
+		print($Player.position)
+		for i in breakables:
+			if i.position.y >= 9000:
+				print(i.position)
+				i.position.y -= 10000
+				print(i.position)
+	if Input.is_action_just_pressed("Restart from Checkpoint"):
+		for i in breakables:
+			if i.position.y >= 9000:
+				print(i.position)
+				i.position.y -= 10000
+				print(i.position)
+		pass
 		
 		
 func _on_back_to_game_pressed():
@@ -44,4 +59,7 @@ func _on_reload_checkpoint_pressed():
 	get_tree().paused = false
 	$PauseMenu.visible = false
 	$Player.respawn()
+	for i in breakables:
+		if i.position.y >= 10000:
+			i.position.y -= 10000
 

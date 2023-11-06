@@ -10,7 +10,7 @@ height = 304.0
 radius = 129.0
 height = 298.0
 
-[node name="D2Breakable" type="Sprite2D" groups=["breakable"]]
+[node name="D2Breakable" type="Sprite2D" groups=["breakable", "breakableparent"]]
 texture = ExtResource("1_ptfhk")
 
 [node name="Area2D" type="Area2D" parent="." groups=["breakable"]]
@@ -20,9 +20,9 @@ position = Vector2(17, 9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wmq4n")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["breakable"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D" groups=["breakable"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
 position = Vector2(14, 11)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_4wjxg")

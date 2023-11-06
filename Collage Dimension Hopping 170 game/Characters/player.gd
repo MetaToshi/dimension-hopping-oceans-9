@@ -102,12 +102,13 @@ func _on_player_hurt_box_area_entered(area):
 func _on_attacking_area_entered(area):
 	if area.is_in_group("breakable"):
 		var k = area.get_owner()
-		k.queue_free()
+		k.position.y += 10000
+		print(k.position)
 		$Attacking.set_deferred("visible", false)
 		$Attacking/CollisionShape2D.set_deferred("disabled", true)
 	if area.is_in_group("enemy"):
 		var k = area.get_owner()
-		k.queue_free()
+		k.position.y += 10000
 		$Attacking.set_deferred("visible", false)
 		$Attacking/CollisionShape2D.set_deferred("disabled", true)
 	pass

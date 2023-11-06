@@ -8,7 +8,7 @@ size = Vector2(71, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yejp"]
 size = Vector2(71, 128)
 
-[node name="D3Breakable" type="Sprite2D" groups=["breakable"]]
+[node name="D3Breakable" type="Sprite2D" groups=["breakable", "breakableparent"]]
 position = Vector2(2.08165e-12, 1500)
 scale = Vector2(5, 5)
 texture = ExtResource("1_b1adg")
@@ -19,8 +19,9 @@ texture = ExtResource("1_b1adg")
 position = Vector2(5.5, 0)
 shape = SubResource("RectangleShape2D_ovij5")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["breakable"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D" groups=["breakable"]]
+scale = Vector2(1, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
 position = Vector2(5.5, 0)
 shape = SubResource("RectangleShape2D_4yejp")
