@@ -1,13 +1,18 @@
+
 ~ this_is_a_node_title
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Beanie: Flow! The headmaster tasked us with clearing slugs in the west wing.
+Flow: We’re on bug duty, again?! 
+Beanie: Yeah. 
+Flow: OK, I guess I’ll take care of it.
+Beanie: Hey, I’m helping you! 
+Flow: Oh yeah? Like last time when I got rid of twice as many bugs as you? 
+Beanie: It wasn’t twice as many!! I got rid of 19 of ‘em!! 
+Flow: And I got rid of 25. 
+Beanie: … That’s not double, though. 
+Flow: Beanie, the longer we wait, the more bugs come in.
+Beanie: Yeah, let’s get going.
+Flow: Last one there is cleaning the wing!! 
+Beanie: Hey, wait! That’s not fair!! You have a head start!! Hey!!  
 
 => END

@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://b50kivr8cdnj3"]
+[gd_scene load_steps=19 format=3 uid="uid://b50kivr8cdnj3"]
 
 [ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_ln2dp"]
-[ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="2_28kvv"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_aj0ac"]
 [ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://Assets/dim1bg2.png" id="3_2xwvp"]
 [ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://Assets/dim1bg1.png" id="4_pa008"]
@@ -1534,7 +1533,7 @@ layer_0/tile_data = PackedInt32Array(327705, 327680, 2, 327710, 327680, 2, 32771
 
 [node name="ContinueButton" type="Button" parent="."]
 offset_left = 45.0
-offset_top = 471.0
+offset_top = 486.0
 offset_right = 1045.0
 offset_bottom = 567.0
 text = "Cutscene Finished.
@@ -1573,30 +1572,13 @@ libraries = {
 "": SubResource("AnimationLibrary_h3m4h")
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 366.0
-offset_top = 417.0
-offset_right = 522.0
-offset_bottom = 476.0
-texture = ExtResource("2_28kvv")
-
-[node name="Label" type="Label" parent="CanvasLayer/NinePatchRect"]
-layout_mode = 0
-offset_left = 29.0
-offset_top = 15.0
-offset_right = 131.0
-offset_bottom = 44.0
-text = "Press SPACE."
-
 [node name="BeanieHeadshotSprite" type="Sprite2D" parent="."]
-position = Vector2(198, 304)
+position = Vector2(197, 316)
 scale = Vector2(0.294977, 0.294977)
 texture = ExtResource("11_yibn2")
 
 [node name="FlowSprite" type="Sprite2D" parent="."]
-position = Vector2(939, 289)
+position = Vector2(943, 309)
 scale = Vector2(0.321554, 0.321554)
 texture = ExtResource("12_2xt0y")
 
