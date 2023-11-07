@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cqmurgp36bllb"]
+[gd_scene load_steps=38 format=3 uid="uid://cqmurgp36bllb"]
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bo6srldlg6tcl" path="res://Characters/D1Enemy.tscn" id="5_sf8g2"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="6_pfu4o"]
 [ext_resource type="Texture2D" uid="uid://c2fhdqjrnxi52" path="res://Assets/d2foreground.png" id="7_dmk4s"]
-[ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Texture2D" uid="uid://u1ynwxd6nctf" path="res://Assets/DIM3 tileset.png" id="8_jn134"]
 [ext_resource type="Texture2D" uid="uid://mk2w0ehfyy6s" path="res://Assets/temp dim3 background.png" id="8_unnsh"]
@@ -17,16 +16,19 @@
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
 [ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts + Scenes/sprite_2d.tscn" id="10_e3c4m"]
 [ext_resource type="Texture2D" uid="uid://hrmlmamf0cr7" path="res://Assets/d2tiles.png" id="11_a5mce"]
-[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts + Scenes/mainmenu.tscn" id="11_l4yfr"]
+[ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts/mainmenu.tscn" id="11_l4yfr"]
 [ext_resource type="Texture2D" uid="uid://dxxb5d34reemj" path="res://Assets/d2tiles(1).png" id="13_0xrta"]
 [ext_resource type="Texture2D" uid="uid://bm8k3dm7o5df0" path="res://Assets/game_hint_text.webp" id="13_gao4e"]
+[ext_resource type="Texture2D" uid="uid://c6tiprcjfbfih" path="res://Assets/ARTG_170_Jam_2_Dimension_1_Portal.png" id="14_3x74f"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
+[ext_resource type="Texture2D" uid="uid://bdpc6rrswyqsa" path="res://Assets/wedding arch portal.png" id="16_5kduk"]
+[ext_resource type="Texture2D" uid="uid://cmkdbu1y5vtm5" path="res://Assets/PortalDimention2.png" id="17_858ta"]
 [ext_resource type="PackedScene" uid="uid://bjn500ldjgebj" path="res://Scripts/d1_jumpable.tscn" id="17_vewc0"]
 [ext_resource type="PackedScene" uid="uid://ct22pepdmjxr5" path="res://Scripts/d3_breakable.tscn" id="18_yrbqv"]
 [ext_resource type="PackedScene" uid="uid://b8kb8qaw842w6" path="res://Scripts/d2_breakable.tscn" id="19_5kmwc"]
 [ext_resource type="PackedScene" uid="uid://cyej7wiyd2ory" path="res://Characters/d2enemy.tscn" id="22_6erjc"]
 [ext_resource type="PackedScene" uid="uid://bub3wylwvnlks" path="res://Characters/d_3_enemy.tscn" id="23_jbuwv"]
-[ext_resource type="PackedScene" uid="uid://cgnkauwvt1cp7" path="res://Characters/dovesprite.tscn" id="26_etld5"]
+[ext_resource type="PackedScene" path="res://Characters/dovesprite.tscn" id="26_etld5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
@@ -3254,11 +3256,12 @@ sources/3 = SubResource("TileSetAtlasSource_hvcnj")
 sources/4 = SubResource("TileSetAtlasSource_tise7")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1uhcq"]
-radius = 5.58038
-height = 60.9811
+radius = 154.507
+height = 770.717
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6rqr"]
-height = 77.5849
+radius = 39.7627
+height = 245.434
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qad8b")
@@ -3394,42 +3397,43 @@ position = Vector2(19216, -615)
 position = Vector2(22354, 173)
 
 [node name="TestPortal" type="Sprite2D" parent="portal"]
-position = Vector2(3, -13)
-scale = Vector2(5.73438, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(51, -11)
+scale = Vector2(0.359952, 0.415857)
+texture = ExtResource("14_3x74f")
 script = ExtResource("8_ipvwj")
 
 [node name="Area2D" type="Area2D" parent="portal/TestPortal" groups=["Portal", "player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal/TestPortal/Area2D"]
-position = Vector2(-0.174377, -0.452831)
+position = Vector2(-18.8338, 59.1698)
 shape = SubResource("CapsuleShape2D_1uhcq")
 
 [node name="portal3" type="Node2D" parent="." groups=["CharacterPlayer", "Portal3"]]
 
 [node name="TestPortal" type="Sprite2D" parent="portal3"]
-position = Vector2(18554, 6156)
-scale = Vector2(5.73438, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(17146, 6104)
+scale = Vector2(1.58046, 1.82592)
+texture = ExtResource("16_5kduk")
 script = ExtResource("8_ipvwj")
 
 [node name="Area2D" type="Area2D" parent="portal3/TestPortal" groups=["Portal3", "player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal3/TestPortal/Area2D"]
-position = Vector2(-0.174377, -0.452831)
+position = Vector2(109.462, -9.31025)
 shape = SubResource("CapsuleShape2D_1uhcq")
 
 [node name="portal2" type="Node2D" parent="." groups=["portal2"]]
 
 [node name="TestPortal2" type="Sprite2D" parent="portal2"]
-position = Vector2(30531, 3375)
-scale = Vector2(5.734, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(30402, 3377)
+scale = Vector2(1.54319, 1.78299)
+texture = ExtResource("17_858ta")
 script = ExtResource("9_d7uj5")
 
 [node name="Area2D" type="Area2D" parent="portal2/TestPortal2" groups=["portal2"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal2/TestPortal2/Area2D"]
+position = Vector2(-5.23193, 11.4717)
 shape = SubResource("CapsuleShape2D_v6rqr")
 
 [node name="FirstWallHint" type="Sprite2D" parent="."]
@@ -3593,23 +3597,14 @@ position = Vector2(16880, -1240)
 [node name="CharacterBody2D13" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(4849, 2585)
 
-[node name="CharacterBody2D14" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(2510, 3295)
-
-[node name="CharacterBody2D15" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(6280, 3300)
-
-[node name="CharacterBody2D16" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(10020, 3300)
-
 [node name="CharacterBody2D39" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(9791, 3293)
+position = Vector2(9761, 3125)
 
 [node name="CharacterBody2D40" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(6017, 3286)
+position = Vector2(6122, 3026)
 
 [node name="CharacterBody2D41" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(2236, 3306)
+position = Vector2(2388, 3043)
 
 [node name="CharacterBody2D20" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(8523, 2398)
@@ -3629,23 +3624,14 @@ position = Vector2(25491, 3451)
 [node name="CharacterBody2D22" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(27023, 3310)
 
-[node name="CharacterBody2D25" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(27658, 3890)
-
 [node name="CharacterBody2D26" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(26882, 3961)
-
-[node name="CharacterBody2D27" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(26081, 3981)
+position = Vector2(26628, 3802)
 
 [node name="CharacterBody2D28" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(25844, 3966)
-
-[node name="CharacterBody2D31" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(23901, 4087)
+position = Vector2(25886, 3804)
 
 [node name="CharacterBody2D32" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(23592, 4087)
+position = Vector2(23701, 3907)
 
 [node name="CharacterBody2D33" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(20630, 3646)
@@ -3653,23 +3639,14 @@ position = Vector2(20630, 3646)
 [node name="CharacterBody2D34" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(20350, 3638)
 
-[node name="CharacterBody2D35" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(17803, 3697)
-
 [node name="CharacterBody2D36" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(17528, 3710)
-
-[node name="CharacterBody2D37" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(15032, 3502)
+position = Vector2(17571, 3525)
 
 [node name="CharacterBody2D38" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(14740, 3494)
-
-[node name="CharacterBody2D29" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(26662, 3966)
+position = Vector2(14817, 3219)
 
 [node name="CharacterBody2D30" parent="." instance=ExtResource("22_6erjc")]
-position = Vector2(27438, 3897)
+position = Vector2(27390, 3738)
 
 [node name="CharacterBody2D23" parent="." instance=ExtResource("22_6erjc")]
 position = Vector2(22346, 3260)
@@ -3684,13 +3661,13 @@ position = Vector2(8296, 4769)
 position = Vector2(6719, 5776)
 
 [node name="D3Enemy5" parent="." instance=ExtResource("23_jbuwv")]
-position = Vector2(11810, 6052)
+position = Vector2(11966, 6052)
 
 [node name="D3Enemy6" parent="." instance=ExtResource("23_jbuwv")]
 position = Vector2(14421, 6175)
 
 [node name="D3Enemy7" parent="." instance=ExtResource("23_jbuwv")]
-position = Vector2(17193, 6179)
+position = Vector2(16097, 6179)
 
 [node name="D3Enemy4" parent="." instance=ExtResource("23_jbuwv")]
 position = Vector2(6987, 5773)
@@ -3708,23 +3685,23 @@ position = Vector2(1864, 5912)
 position = Vector2(7632, 4937)
 
 [node name="Dovesprite4" parent="." instance=ExtResource("26_etld5")]
-position = Vector2(9119, 4922)
+position = Vector2(9074, 4922)
 
 [node name="Dovesprite5" parent="." instance=ExtResource("26_etld5")]
-position = Vector2(9813, 5202)
+position = Vector2(9754, 5202)
 
 [node name="Dovesprite6" parent="." instance=ExtResource("26_etld5")]
-position = Vector2(10973, 5516)
+position = Vector2(10884, 5538)
 
 [node name="Dovesprite7" parent="." instance=ExtResource("26_etld5")]
-position = Vector2(12176, 5838)
+position = Vector2(12600, 5890)
 
 [node name="Dovesprite8" parent="." instance=ExtResource("26_etld5")]
-position = Vector2(18376, 6160)
+position = Vector2(16818, 6107)
 
 [connection signal="pressed" from="PauseMenu/Back to Game" to="." method="_on_back_to_game_pressed"]
-[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_reload_checkpoint_pressed"]
 [connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_reload_checkpoint_pressed"]
 [connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Main Menu" to="." method="_on_back_to_main_menu_pressed"]
 [connection signal="pressed" from="ControlMenuX" to="." method="_on_control_menu_x_pressed"]
