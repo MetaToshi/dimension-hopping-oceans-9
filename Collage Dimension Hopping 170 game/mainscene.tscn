@@ -2596,7 +2596,7 @@ position = Vector2(19216, -615)
 [node name="portal" type="Node2D" parent="." groups=["CharacterPlayer", "Portal"]]
 
 [node name="TestPortal" type="Sprite2D" parent="portal"]
-position = Vector2(21500, 100)
+position = Vector2(2000, 100)
 scale = Vector2(5.73438, 6.625)
 texture = ExtResource("7_jv475")
 script = ExtResource("8_ipvwj")
@@ -2781,8 +2781,8 @@ position = Vector2(5628, 2586)
 position = Vector2(3342, 6096)
 
 [connection signal="pressed" from="PauseMenu/Back to Game" to="." method="_on_back_to_game_pressed"]
-[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
 [connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_reload_checkpoint_pressed"]
+[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
 [connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Main Menu" to="." method="_on_back_to_main_menu_pressed"]
 [connection signal="pressed" from="ControlMenuX" to="." method="_on_control_menu_x_pressed"]
