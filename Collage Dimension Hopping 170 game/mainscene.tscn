@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cqmurgp36bllb"]
+[gd_scene load_steps=35 format=3 uid="uid://cqmurgp36bllb"]
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bo6srldlg6tcl" path="res://Characters/D1Enemy.tscn" id="5_sf8g2"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="6_pfu4o"]
 [ext_resource type="Texture2D" uid="uid://c2fhdqjrnxi52" path="res://Assets/d2foreground.png" id="7_dmk4s"]
-[ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Texture2D" uid="uid://u1ynwxd6nctf" path="res://Assets/DIM3 tileset.png" id="8_jn134"]
 [ext_resource type="Texture2D" uid="uid://mk2w0ehfyy6s" path="res://Assets/temp dim3 background.png" id="8_unnsh"]
@@ -19,7 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://hrmlmamf0cr7" path="res://Assets/d2tiles.png" id="11_a5mce"]
 [ext_resource type="PackedScene" uid="uid://chqeb7j5ym2g8" path="res://Scripts + Scenes/mainmenu.tscn" id="11_l4yfr"]
 [ext_resource type="Texture2D" uid="uid://bm8k3dm7o5df0" path="res://Assets/game_hint_text.webp" id="13_gao4e"]
+[ext_resource type="Texture2D" uid="uid://c6tiprcjfbfih" path="res://Assets/ARTG_170_Jam_2_Dimension_1_Portal.png" id="14_3x74f"]
 [ext_resource type="Texture2D" uid="uid://rtfa88uouejn" path="res://Assets/game_project_tutorial_image.webp" id="14_g383w"]
+[ext_resource type="Texture2D" uid="uid://bdpc6rrswyqsa" path="res://Assets/wedding arch portal.png" id="16_5kduk"]
+[ext_resource type="Texture2D" uid="uid://cmkdbu1y5vtm5" path="res://Assets/PortalDimention2.png" id="17_858ta"]
 [ext_resource type="PackedScene" uid="uid://bjn500ldjgebj" path="res://Scripts/d1_jumpable.tscn" id="17_vewc0"]
 [ext_resource type="PackedScene" uid="uid://ct22pepdmjxr5" path="res://Scripts/d3_breakable.tscn" id="18_yrbqv"]
 [ext_resource type="PackedScene" uid="uid://b8kb8qaw842w6" path="res://Scripts/d2_breakable.tscn" id="19_5kmwc"]
@@ -2480,11 +2482,12 @@ sources/1 = SubResource("TileSetAtlasSource_0gg2d")
 sources/3 = SubResource("TileSetAtlasSource_hvcnj")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1uhcq"]
-radius = 5.58038
-height = 60.9811
+radius = 31.7402
+height = 258.905
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6rqr"]
-height = 77.5849
+radius = 34.4097
+height = 252.623
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qad8b")
@@ -2620,42 +2623,45 @@ position = Vector2(19216, -615)
 position = Vector2(22364, 139)
 
 [node name="TestPortal" type="Sprite2D" parent="portal"]
-position = Vector2(3, -13)
-scale = Vector2(5.73438, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(-140.652, 11.1445)
+scale = Vector2(0.396381, 0.450268)
+texture = ExtResource("14_3x74f")
 script = ExtResource("8_ipvwj")
 
 [node name="Area2D" type="Area2D" parent="portal/TestPortal" groups=["Portal", "player"]]
+position = Vector2(-45.4199, 110.629)
+scale = Vector2(-31.7797, 11.4943)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal/TestPortal/Area2D"]
-position = Vector2(-0.174377, -0.452831)
+position = Vector2(-27.2064, -7.01727)
 shape = SubResource("CapsuleShape2D_1uhcq")
 
 [node name="portal3" type="Node2D" parent="." groups=["CharacterPlayer", "Portal3"]]
 
 [node name="TestPortal" type="Sprite2D" parent="portal3"]
-position = Vector2(10240, 5827)
-scale = Vector2(5.73438, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(20012.8, 6136.09)
+scale = Vector2(1.48975, 1.70193)
+texture = ExtResource("16_5kduk")
 script = ExtResource("8_ipvwj")
 
 [node name="Area2D" type="Area2D" parent="portal3/TestPortal" groups=["Portal3", "player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal3/TestPortal/Area2D"]
-position = Vector2(-0.174377, -0.452831)
+position = Vector2(0.697693, 3.05291)
 shape = SubResource("CapsuleShape2D_1uhcq")
 
 [node name="portal2" type="Node2D" parent="." groups=["portal2"]]
 
 [node name="TestPortal2" type="Sprite2D" parent="portal2"]
-position = Vector2(20000, 2576)
-scale = Vector2(5.734, 6.625)
-texture = ExtResource("7_jv475")
+position = Vector2(20068.4, 2566.81)
+scale = Vector2(1.66614, 1.60981)
+texture = ExtResource("17_858ta")
 script = ExtResource("9_d7uj5")
 
 [node name="Area2D" type="Area2D" parent="portal2/TestPortal2" groups=["portal2"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal2/TestPortal2/Area2D"]
+position = Vector2(-3.90039, 9.7345)
 shape = SubResource("CapsuleShape2D_v6rqr")
 
 [node name="FirstWallHint" type="Sprite2D" parent="."]
