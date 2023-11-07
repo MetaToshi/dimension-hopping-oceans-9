@@ -3383,7 +3383,7 @@ position = Vector2(14638, -1099)
 position = Vector2(19216, -615)
 
 [node name="portal" type="Node2D" parent="." groups=["CharacterPlayer", "Portal"]]
-position = Vector2(6528, 98)
+position = Vector2(22354, 173)
 
 [node name="TestPortal" type="Sprite2D" parent="portal"]
 position = Vector2(3, -13)
