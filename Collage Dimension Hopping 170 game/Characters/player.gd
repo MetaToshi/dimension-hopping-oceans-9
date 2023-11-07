@@ -80,6 +80,7 @@ func _on_area_2d_area_entered(area):
 		$Attacking/D3Attack.visible = true
 		$ParallaxBackgroundDIM1.visible = false
 		$ParallaxBackgroundDIM2.visible = false
+		$ParallaxBackgroundDIM3.visible = true
 		$DIM2BGMUSIC.stop()
 		$DIM3BGMUSIC.play()
 		# $ParallaxLayer1.parallax_scale = Vector2() # changes size

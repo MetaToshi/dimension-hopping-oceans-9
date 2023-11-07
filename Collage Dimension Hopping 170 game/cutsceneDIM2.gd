@@ -7,7 +7,7 @@ var currentSprite : int = 1
 
 
 func _ready():
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/DIMENSION2.dialogue"), "this_is_a_node_title")
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/DIMENSION3.dialogue"), "this_is_a_node_title")
 	sprite1 = $BeanieSprite
 	sprite2 = $FlowSprite
 	sprite1.show()

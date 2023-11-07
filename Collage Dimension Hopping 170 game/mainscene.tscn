@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cqmurgp36bllb"]
+[gd_scene load_steps=33 format=3 uid="uid://cqmurgp36bllb"]
 
 [ext_resource type="Script" path="res://mainscene.gd" id="1_qad8b"]
 [ext_resource type="PackedScene" uid="uid://u7bk8tq3cpps" path="res://Characters/player.tscn" id="1_sr35f"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bc12lfq6flxut" path="res://TestAssets/testPortal.png" id="7_jv475"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="8_ipvwj"]
 [ext_resource type="Texture2D" uid="uid://u1ynwxd6nctf" path="res://Assets/DIM3 tileset.png" id="8_jn134"]
+[ext_resource type="Texture2D" uid="uid://mk2w0ehfyy6s" path="res://Assets/temp dim3 background.png" id="8_unnsh"]
 [ext_resource type="Texture2D" uid="uid://c6mn0odjiqvbg" path="res://Assets/d1tiles.png" id="8_wvfwh"]
 [ext_resource type="Script" path="res://TestPortal2.gd" id="9_d7uj5"]
 [ext_resource type="PackedScene" uid="uid://b44mbxo0yuf7m" path="res://Scripts + Scenes/sprite_2d.tscn" id="10_e3c4m"]
@@ -2563,6 +2564,29 @@ position = Vector2(2000, 2.08165e-12)
 motion_mirroring = Vector2(3072, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM2/Foreground2"]
+position = Vector2(4, 407)
+scale = Vector2(3, 3)
+texture = ExtResource("7_dmk4s")
+
+[node name="ParallaxBackgroundDIM3" type="ParallaxBackground" parent="Player"]
+visible = false
+
+[node name="Background" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM3"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1496, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM3/Background"]
+position = Vector2(558, 312)
+scale = Vector2(2.93125, 2.93125)
+texture = ExtResource("8_unnsh")
+
+[node name="Foreground1" type="ParallaxLayer" parent="Player/ParallaxBackgroundDIM3"]
+visible = false
+position = Vector2(2000, 2.08165e-12)
+motion_offset = Vector2(1536, 2.08165e-12)
+motion_mirroring = Vector2(3072, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/ParallaxBackgroundDIM3/Foreground1"]
 position = Vector2(4, 407)
 scale = Vector2(3, 3)
 texture = ExtResource("7_dmk4s")

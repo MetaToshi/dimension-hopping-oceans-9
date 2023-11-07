@@ -1,15 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://diqftejk67ym4"]
+[gd_scene load_steps=20 format=3 uid="uid://cv4jufqngwyxu"]
 
-[ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_ks1te"]
-[ext_resource type="Script" path="res://ActionableFinder.gd" id="2_0uirg"]
-[ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_vwyky"]
-[ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="3_3803v"]
-[ext_resource type="Script" path="res://CutsceneCollision.gd" id="3_utv8x"]
-[ext_resource type="Resource" uid="uid://7v1ieik41yqv" path="res://Dialogue/DIMENSION1.dialogue" id="4_ulwxq"]
-[ext_resource type="Texture2D" uid="uid://c2fhdqjrnxi52" path="res://Assets/d2foreground.png" id="6_5gdeo"]
-[ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="9_jthu6"]
-[ext_resource type="Texture2D" uid="uid://wg4lejmfyfc1" path="res://Assets/UI Assets/Beanie_Sprite.png" id="10_4bqbg"]
-[ext_resource type="Texture2D" uid="uid://btbgro4vd75d2" path="res://Assets/UI Assets/Flow_Sprite.png" id="11_m8rdo"]
+[ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_xnnwi"]
+[ext_resource type="Script" path="res://ActionableFinder.gd" id="2_m2s7e"]
+[ext_resource type="Script" path="res://CutsceneCollision.gd" id="3_m5xa3"]
+[ext_resource type="Resource" uid="uid://7v1ieik41yqv" path="res://Dialogue/DIMENSION1.dialogue" id="4_w82ea"]
+[ext_resource type="Texture2D" uid="uid://mk2w0ehfyy6s" path="res://Assets/temp dim3 background.png" id="5_c08hk"]
+[ext_resource type="Texture2D" uid="uid://cnph8nxeycsdp" path="res://Assets/dim3breakwall.png" id="6_5yk8g"]
+[ext_resource type="Texture2D" uid="uid://c2fhdqjrnxi52" path="res://Assets/d2foreground.png" id="6_u4noj"]
+[ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="7_cr8we"]
+[ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="8_ikpst"]
+[ext_resource type="Texture2D" uid="uid://dbk6bdqt1duqy" path="res://Assets/UI Assets/DIM3BEANIE.png" id="9_ghs7b"]
+[ext_resource type="Texture2D" uid="uid://c2xn3m1p6q5fc" path="res://Assets/UI Assets/DIM3FLOW.png" id="10_kvwm7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7gov6"]
 
@@ -20,7 +21,7 @@ size = Vector2(200, 119)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_416lw"]
 resource_name = "normaltiles"
-texture = ExtResource("2_vwyky")
+texture = ExtResource("7_cr8we")
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/terrain = 0
@@ -1493,12 +1494,12 @@ _data = {
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(3, 0)
-script = ExtResource("1_ks1te")
+script = ExtResource("1_xnnwi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(139, 257)
 scale = Vector2(6.40234, -6.59611)
-script = ExtResource("2_0uirg")
+script = ExtResource("2_m2s7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_7gov6")
@@ -1515,8 +1516,8 @@ shape = SubResource("CircleShape2D_i511n")
 [node name="CutsceneCollision" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
-script = ExtResource("3_utv8x")
-Dialogue = ExtResource("4_ulwxq")
+script = ExtResource("3_m5xa3")
+Dialogue = ExtResource("4_w82ea")
 _name = "DIM1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CutsceneCollision"]
@@ -1530,28 +1531,45 @@ motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(1496, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM2/Background"]
-position = Vector2(603, 198)
-scale = Vector2(2.93125, 2.93125)
-texture = ExtResource("3_3803v")
+position = Vector2(562.178, 327.5)
+scale = Vector2(2.31571, 2.23958)
+texture = ExtResource("5_c08hk")
 
 [node name="Foreground1" type="ParallaxLayer" parent="ParallaxBackgroundDIM2"]
 position = Vector2(2000, 2.08165e-12)
 motion_offset = Vector2(1536, 2.08165e-12)
 motion_mirroring = Vector2(3072, 2.08165e-12)
 
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackgroundDIM2/Foreground1"]
+position = Vector2(-2003, 201)
+scale = Vector2(4.37207, 4.76752)
+texture = ExtResource("6_5yk8g")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackgroundDIM2/Foreground1"]
+position = Vector2(-1056.96, 258.368)
+rotation = 0.00813663
+scale = Vector2(2.19193, 2.65154)
+texture = ExtResource("6_5yk8g")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackgroundDIM2/Foreground1"]
+position = Vector2(-1736.25, 250.25)
+scale = Vector2(3.26953, 3.26953)
+texture = ExtResource("6_5yk8g")
+
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM2/Foreground1"]
-position = Vector2(-1.667, 300)
-scale = Vector2(3, 3)
-texture = ExtResource("6_5gdeo")
+position = Vector2(-887, 230)
+scale = Vector2(4.125, 4.125)
+texture = ExtResource("6_5yk8g")
 
 [node name="Foreground2" type="ParallaxLayer" parent="ParallaxBackgroundDIM2"]
+visible = false
 position = Vector2(2000, 2.08165e-12)
 motion_mirroring = Vector2(3072, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackgroundDIM2/Foreground2"]
 position = Vector2(-1454.5, 170.5)
 scale = Vector2(2.67383, 2.73958)
-texture = ExtResource("6_5gdeo")
+texture = ExtResource("6_u4noj")
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -1583,7 +1601,7 @@ offset_left = 473.0
 offset_top = 414.0
 offset_right = 629.0
 offset_bottom = 473.0
-texture = ExtResource("9_jthu6")
+texture = ExtResource("8_ikpst")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/NinePatchRect"]
@@ -1596,14 +1614,14 @@ text = "Press SPACE."
 metadata/_edit_use_anchors_ = true
 
 [node name="BeanieSprite" type="Sprite2D" parent="."]
-position = Vector2(229, 345)
-scale = Vector2(0.45575, 0.44175)
-texture = ExtResource("10_4bqbg")
+position = Vector2(196, 282)
+scale = Vector2(3.153, 3.05614)
+texture = ExtResource("9_ghs7b")
 
 [node name="FlowSprite" type="Sprite2D" parent="."]
-position = Vector2(869, 301)
-scale = Vector2(0.4705, 0.4705)
-texture = ExtResource("11_m8rdo")
+position = Vector2(906, 284)
+scale = Vector2(2.82248, 2.82248)
+texture = ExtResource("10_kvwm7")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed" flags=18]
 [connection signal="toggled" from="ContinueButton" to="." method="_on_button_toggled" flags=18]

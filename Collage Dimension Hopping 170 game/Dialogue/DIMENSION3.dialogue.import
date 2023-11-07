@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://kwjonw2yj2j5"
+path="res://.godot/imported/DIMENSION3.dialogue-85855d3559021dc6636c40bb049d21aa.tres"
+
+[deps]
+
+source_file="res://Dialogue/DIMENSION3.dialogue"
+dest_files=["res://.godot/imported/DIMENSION3.dialogue-85855d3559021dc6636c40bb049d21aa.tres"]
+
+[params]
+
+defaults=true
