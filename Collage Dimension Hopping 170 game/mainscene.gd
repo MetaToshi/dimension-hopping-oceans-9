@@ -12,16 +12,12 @@ func _process(_delta):
 	if $Player.position.x <= 100:
 		print($Player.position)
 		for i in breakables:
-			if i.position.y >= 9000:
-				print(i.position)
+			if i.position.y >= 8800:
 				i.position.y -= 10000
-				print(i.position)
 	if Input.is_action_just_pressed("Restart from Checkpoint"):
 		for i in breakables:
-			if i.position.y >= 9000:
-				print(i.position)
+			if i.position.y >= 8800:
 				i.position.y -= 10000
-				print(i.position)
 		pass
 		
 		

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgnkauwvt1cp7"]
+
+[ext_resource type="Texture2D" uid="uid://b3uaxxdrdh22f" path="res://Assets/dovesprite.png" id="1_yihww"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovntw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ugw76"]
+
+[node name="Dovesprite" type="CharacterBody2D" groups=["braekable", "breakableparent", "enemy"]]
+scale = Vector2(1.79688, 1.79688)
+
+[node name="Area2D" type="Area2D" parent="." groups=["breakable", "enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ovntw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["breakable", "enemy"]]
+shape = SubResource("CapsuleShape2D_ugw76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yihww")
