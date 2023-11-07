@@ -1,28 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://biy17yjjesfsf"]
+[gd_scene load_steps=4 format=3 uid="uid://biy17yjjesfsf"]
 
 [ext_resource type="Script" path="res://Scripts + Scenes/main_menu.gd" id="1_fwkcr"]
-[ext_resource type="Texture2D" uid="uid://hve8wj6yue0o" path="res://TestAssets/titlepageone.png" id="2_u2rw2"]
+[ext_resource type="Texture2D" uid="uid://bxab2nvsxu1t4" path="res://Assets/UI Assets/Title_Screen.png" id="2_hyms7"]
+[ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="3_5afhg"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_fwkcr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.86613, 1.87027)
-texture = ExtResource("2_u2rw2")
+position = Vector2(0, -2)
+scale = Vector2(0.31668, 0.317383)
+texture = ExtResource("2_hyms7")
 centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -203.0
-offset_right = 176.0
-offset_bottom = -47.0
-grow_vertical = 0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -71.5
+offset_bottom = 71.5
+grow_horizontal = 0
+grow_vertical = 2
 size_flags_vertical = 2
 size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 25
+
+[node name="BlackScreenForGwtf" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(-28, 70.5)
+scale = Vector2(0.33045, 1.00367)
+texture = ExtResource("3_5afhg")
 
 [node name="startbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
