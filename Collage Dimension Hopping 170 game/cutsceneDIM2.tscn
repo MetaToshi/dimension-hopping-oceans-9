@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://diqftejk67ym4"]
+[gd_scene load_steps=20 format=3 uid="uid://diqftejk67ym4"]
 
 [ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_ks1te"]
 [ext_resource type="Script" path="res://ActionableFinder.gd" id="2_0uirg"]
+[ext_resource type="AudioStream" uid="uid://dsdfqu6pv75vw" path="res://Audio/Dimension_2_BGM.wav" id="2_u5cqh"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_vwyky"]
 [ext_resource type="Texture2D" uid="uid://ct43isrbb05tf" path="res://Assets/Background_Dimention2_NoEyes.png" id="3_3803v"]
 [ext_resource type="Script" path="res://CutsceneCollision.gd" id="3_utv8x"]
@@ -1494,6 +1495,11 @@ _data = {
 [node name="Node2D2" type="Node2D"]
 position = Vector2(3, 0)
 script = ExtResource("1_ks1te")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_u5cqh")
+volume_db = -6.367
+autoplay = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(139, 257)

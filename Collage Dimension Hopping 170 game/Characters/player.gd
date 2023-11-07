@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed : float = 600.0
 @export var jump_velocity : float = -1150
 var current_Restart = Vector2(0,200)
-
+@onready var portal = preload("res://Globals/Globals.gd")
 
 """
 func _ready() -> void:
@@ -72,6 +72,7 @@ func _on_area_2d_area_entered(area):
 		current_Restart.y = 2600
 		speed = 775
 		jump_velocity = -950
+		# get_tree().change_scene_to_file("res://cutsceneDIM2.tscn")
 		
 	if area.is_in_group("portal2"):
 		$PLAYERDIM1.visible = false

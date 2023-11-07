@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b50kivr8cdnj3"]
+[gd_scene load_steps=21 format=3 uid="uid://b50kivr8cdnj3"]
 
 [ext_resource type="Script" path="res://cutsceneDIM1.gd" id="1_ein7h"]
 [ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="2_28kvv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c7b8q64rliehf" path="res://Assets/dim1bg1.png" id="4_pa008"]
 [ext_resource type="Script" path="res://ActionableFinder.gd" id="4_vr7eu"]
 [ext_resource type="Texture2D" uid="uid://hsnitrf70wgv" path="res://Assets/dim1bg1alt.png" id="5_eawtv"]
+[ext_resource type="AudioStream" uid="uid://co08x8y6y2d45" path="res://Audio/Dimension_1_BGM_v1.wav" id="6_1a4m7"]
 [ext_resource type="Script" path="res://CutsceneCollision.gd" id="8_b28x5"]
 [ext_resource type="Resource" uid="uid://7v1ieik41yqv" path="res://Dialogue/DIMENSION1.dialogue" id="9_12qli"]
 [ext_resource type="Texture2D" uid="uid://ch7oxignxohrg" path="res://Assets/UI Assets/BeanieHeadshotSprite.png" id="11_yibn2"]
@@ -1540,6 +1541,12 @@ offset_bottom = 567.0
 text = "Cutscene Finished.
 Click here to Continue "
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-3, 0)
+stream = ExtResource("6_1a4m7")
+volume_db = -5.25
+autoplay = true
 
 [node name="ParallaxBackgroundDIM1" type="ParallaxBackground" parent="."]
 

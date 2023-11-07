@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv4jufqngwyxu"]
+[gd_scene load_steps=21 format=3 uid="uid://cv4jufqngwyxu"]
 
 [ext_resource type="Script" path="res://cutsceneDIM3.gd" id="1_t4j7f"]
 [ext_resource type="Script" path="res://ActionableFinder.gd" id="2_m2s7e"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="8_ikpst"]
 [ext_resource type="Texture2D" uid="uid://dbk6bdqt1duqy" path="res://Assets/UI Assets/DIM3BEANIE.png" id="9_ghs7b"]
 [ext_resource type="Texture2D" uid="uid://c2xn3m1p6q5fc" path="res://Assets/UI Assets/DIM3FLOW.png" id="10_kvwm7"]
+[ext_resource type="AudioStream" uid="uid://cgmueungf2qdj" path="res://Audio/ARTG_170_Jam_2_Dimension_3_BGM_v1.wav" id="12_3alfl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7gov6"]
 
@@ -1622,6 +1623,11 @@ texture = ExtResource("9_ghs7b")
 position = Vector2(906, 284)
 scale = Vector2(2.82248, 2.82248)
 texture = ExtResource("10_kvwm7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_3alfl")
+volume_db = -5.685
+autoplay = true
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed" flags=18]
 [connection signal="toggled" from="ContinueButton" to="." method="_on_button_toggled" flags=18]

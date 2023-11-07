@@ -1,6 +1,9 @@
 extends Node2D
 
 @onready var breakables = get_tree().get_nodes_in_group("breakableparent")
+@onready var cutscene1 = preload("res://cutsceneDIM2.tscn")
+@onready var cutscene2 = preload("res://cutsceneDIM3.tscn")
+
 
 func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
@@ -58,4 +61,3 @@ func _on_reload_checkpoint_pressed():
 	for i in breakables:
 		if i.position.y >= 10000:
 			i.position.y -= 10000
-
