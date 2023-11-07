@@ -2818,8 +2818,8 @@ position = Vector2(22211, 3265)
 position = Vector2(26952, 3314)
 
 [connection signal="pressed" from="PauseMenu/Back to Game" to="." method="_on_back_to_game_pressed"]
-[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
 [connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_reload_checkpoint_pressed"]
+[connection signal="pressed" from="PauseMenu/Reload Checkpoint" to="." method="_on_back_to_game_pressed"]
 [connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Back to Main Menu" to="." method="_on_back_to_main_menu_pressed"]
 [connection signal="pressed" from="ControlMenuX" to="." method="_on_control_menu_x_pressed"]
