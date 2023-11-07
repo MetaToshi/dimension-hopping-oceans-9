@@ -94,6 +94,7 @@ func _on_area_2d_area_entered(area):
 		jump_velocity = -1100
 		
 	if area.is_in_group("Portal3"):
+		get_tree().change_scene_to_file("res://cutsceneENDING.tscn")
 		position.x = 3000
 		position.y = 150
 		
