@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://b50kivr8cdnj3"]
 
-[ext_resource type="Script" path="res://cutsceneDIM2.gd" id="1_ln2dp"]
+[ext_resource type="Script" path="res://cutsceneDIM1.gd" id="1_ein7h"]
 [ext_resource type="Texture2D" uid="uid://djnbejyukkbo" path="res://Assets/UI Assets/black screen for gwtf.png" id="2_28kvv"]
 [ext_resource type="Texture2D" uid="uid://v45mfdbpbs6o" path="res://TestAssets/Terrain (32x32).png" id="2_aj0ac"]
 [ext_resource type="Texture2D" uid="uid://doonog7p2mip0" path="res://Assets/dim1bg2.png" id="3_2xwvp"]
@@ -1494,7 +1494,7 @@ _data = {
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(3, 0)
-script = ExtResource("1_ln2dp")
+script = ExtResource("1_ein7h")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(139, 257)
@@ -1539,6 +1539,7 @@ offset_right = 1045.0
 offset_bottom = 567.0
 text = "Cutscene Finished.
 Click here to Continue "
+metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxBackgroundDIM1" type="ParallaxBackground" parent="."]
 
@@ -1576,11 +1577,12 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 366.0
-offset_top = 417.0
-offset_right = 522.0
-offset_bottom = 476.0
+offset_left = 475.0
+offset_top = 415.0
+offset_right = 631.0
+offset_bottom = 474.0
 texture = ExtResource("2_28kvv")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/NinePatchRect"]
 layout_mode = 0
@@ -1589,15 +1591,16 @@ offset_top = 15.0
 offset_right = 131.0
 offset_bottom = 44.0
 text = "Press SPACE."
+metadata/_edit_use_anchors_ = true
 
 [node name="BeanieHeadshotSprite" type="Sprite2D" parent="."]
-position = Vector2(198, 304)
-scale = Vector2(0.294977, 0.294977)
+position = Vector2(220.094, 280.42)
+scale = Vector2(0.336274, 0.336274)
 texture = ExtResource("11_yibn2")
 
 [node name="FlowSprite" type="Sprite2D" parent="."]
-position = Vector2(939, 289)
-scale = Vector2(0.321554, 0.321554)
+position = Vector2(900.516, 247.926)
+scale = Vector2(0.393487, 0.393487)
 texture = ExtResource("12_2xt0y")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
